@@ -1,0 +1,6 @@
+framework module Pods_TodayHealine {
+  umbrella header "Pods-TodayHealine-umbrella.h"
+
+  export *
+  module * { export * }
+}
