@@ -30,6 +30,10 @@
 		CDB3ADC61E2CA14F0028E90C /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADC51E2CA14F0028E90C /* FollowViewController.swift */; };
 		CDB3ADC81E2CA15E0028E90C /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADC71E2CA15E0028E90C /* MeViewController.swift */; };
 		CDB3ADCA1E2CA2000028E90C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADC91E2CA2000028E90C /* R.generated.swift */; };
+		CDB3ADCC1E2CA9290028E90C /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADCB1E2CA9290028E90C /* PageContentView.swift */; };
+		CDB3ADCE1E2CA99E0028E90C /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADCD1E2CA99E0028E90C /* PageTitleView.swift */; };
+		CDB3ADD01E2CAF0B0028E90C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADCF1E2CAF0B0028E90C /* Extension.swift */; };
+		CDB3ADD21E2CBBDD0028E90C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADD11E2CBBDD0028E90C /* RecommendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +63,10 @@
 		CDB3ADC51E2CA14F0028E90C /* FollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
 		CDB3ADC71E2CA15E0028E90C /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		CDB3ADC91E2CA2000028E90C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		CDB3ADCB1E2CA9290028E90C /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
+		CDB3ADCD1E2CA99E0028E90C /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		CDB3ADCF1E2CAF0B0028E90C /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		CDB3ADD11E2CBBDD0028E90C /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		F198029347078D1222D49A81 /* Pods-TodayHealine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayHealine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayHealine/Pods-TodayHealine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +192,7 @@
 		CDB3AD9F1E2C9FF50028E90C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CDB3ADCF1E2CAF0B0028E90C /* Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -221,6 +230,7 @@
 			children = (
 				CDB3ADA61E2C9FF50028E90C /* Home.storyboard */,
 				CDB3ADC11E2CA1390028E90C /* HomeViewController.swift */,
+				CDB3ADD11E2CBBDD0028E90C /* RecommendViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -230,6 +240,8 @@
 			children = (
 				CDB3ADBD1E2CA1060028E90C /* MainTabBarController.swift */,
 				CDB3ADBF1E2CA1240028E90C /* MainNavigationController.swift */,
+				CDB3ADCB1E2CA9290028E90C /* PageContentView.swift */,
+				CDB3ADCD1E2CA99E0028E90C /* PageTitleView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -492,7 +504,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDB3ADC21E2CA1390028E90C /* HomeViewController.swift in Sources */,
+				CDB3ADCC1E2CA9290028E90C /* PageContentView.swift in Sources */,
+				CDB3ADCE1E2CA99E0028E90C /* PageTitleView.swift in Sources */,
 				CD6249781E2C6A9E00E22002 /* AppDelegate.swift in Sources */,
+				CDB3ADD01E2CAF0B0028E90C /* Extension.swift in Sources */,
+				CDB3ADD21E2CBBDD0028E90C /* RecommendViewController.swift in Sources */,
 				CDB3ADC81E2CA15E0028E90C /* MeViewController.swift in Sources */,
 				CDB3ADCA1E2CA2000028E90C /* R.generated.swift in Sources */,
 				CDB3ADC41E2CA1430028E90C /* VideoViewController.swift in Sources */,
