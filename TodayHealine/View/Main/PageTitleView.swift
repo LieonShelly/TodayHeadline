@@ -9,17 +9,32 @@
 import UIKit
 
 private let scrollowLineH: CGFloat = 1.0
-private let normalColor: (CGFloat, CGFloat, CGFloat) = (85, 85, 85)
-private let selectColor: (CGFloat, CGFloat, CGFloat) = (255, 128, 0)
-private let labelCountPerPage: Int = 7
+private let zoomScale: CGFloat = 1.2
+private let labelCountPerPage: Int = 5
 class PageTitleView: UIView {
     var titleTapAction: ((_ index: Int) -> Void)?
+    var normalColor: (CGFloat, CGFloat, CGFloat) = (85, 85, 85) {
+        didSet {
+            for label in titleLabels {
+                label.textColor = UIColor(red: normalColor.0 / 255.0, green: normalColor.1 / 255.0, blue: normalColor.2 / 255.0, alpha: 1)
+            }
+        }
+    }
+    var selectColor: (CGFloat, CGFloat, CGFloat) = (255, 128, 0) {
+        didSet {
+            scrollLine.backgroundColor = UIColor(red: self.selectColor.0 / 255.0, green: self.selectColor.1 / 255.0, blue: self.selectColor.2 / 255.0, alpha: 1)
+            titleLabels[0].textColor = UIColor(red: selectColor.0 / 255.0, green: selectColor.1 / 255.0, blue: selectColor.2 / 255.0, alpha: 1)
+        }
+    }
     fileprivate var currentIndex: Int = 0 {
         didSet {
+            var offsetX: CGFloat = 0
             if currentIndex > labelCountPerPage/2 {
-                  scrollView.setContentOffset(CGPoint(x: CGFloat(currentIndex) * labelWidth - CGFloat(labelCountPerPage) * 0.5 * labelWidth, y: 0), animated: true)
+               offsetX = CGFloat(currentIndex) * labelWidth - bounds.width * 0.5 + labelWidth * 0.5
+            } else {
+                offsetX = 0
             }
-          
+             scrollView.setContentOffset(CGPoint(x:offsetX, y: 0), animated: true)
         }
     }
     fileprivate var labelWidth: CGFloat = 0.0
@@ -28,14 +43,14 @@ class PageTitleView: UIView {
     fileprivate lazy var scrollView: UIScrollView = {
         let sv = UIScrollView()
         sv.showsHorizontalScrollIndicator = false
+        sv.showsVerticalScrollIndicator = false
         sv.scrollsToTop = false
         sv.bounces = true
-        sv.delegate = self
         return sv
     }()
     fileprivate lazy var scrollLine: UIView = {
         let scrollLine = UIView()
-        scrollLine.backgroundColor = UIColor(red: selectColor.0 / 255.0, green: selectColor.1 / 255.0, blue: selectColor.2 / 255.0, alpha: 1)
+        scrollLine.backgroundColor = UIColor(red: self.selectColor.0 / 255.0, green: self.selectColor.1 / 255.0, blue: self.selectColor.2 / 255.0, alpha: 1)
         return scrollLine
     }()
     
@@ -116,17 +131,11 @@ extension PageTitleView {
         selectedLabel.textColor = UIColor(red: selectColor.0 / 255.0, green: selectColor.1 / 255.0, blue: selectColor.2 / 255.0, alpha: 1)
         currentIndex = selectedLabel.tag
         let offsetX = CGFloat(currentIndex) * scrollLine.frame.width
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.1) {
             self.scrollLine.frame.origin.x = offsetX
         }
         if let block = titleTapAction {
             block(selectedLabel.tag)
         }
-    }
-}
-
-extension PageTitleView: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.x)
     }
 }

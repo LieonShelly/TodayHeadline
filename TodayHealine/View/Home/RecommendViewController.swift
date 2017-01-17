@@ -13,6 +13,6 @@ class RecommendViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor
-         = UIColor.random
+         = UIColor.random()
     }
 }

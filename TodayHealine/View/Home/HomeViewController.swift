@@ -27,7 +27,6 @@ class HomeViewController: UIViewController {
         let height: CGFloat = UIScreen.height - 64 - 44 - 44
         let width: CGFloat = UIScreen.width
         let contentView = PageContentView(frame: CGRect(x: x, y: y, width: width, height: height), childVCs: childVCs, parentVC: self)
-        
         return contentView
     }()
 
@@ -36,8 +35,10 @@ class HomeViewController: UIViewController {
         let y: CGFloat = 64
         let height: CGFloat = 44
         let width: CGFloat = UIScreen.width
-        let titleView = PageTitleView(frame: CGRect(x: x, y: y, width: width, height: height), titles: ["1", "2", "3", "4", "5", "6", "7", "8"])
-        
+        let titleView = PageTitleView(frame: CGRect(x: x, y: y, width: width, height: height), titles: ["推荐", "热点", "成都", "视屏", "社会", "科技", "火山直播"])
+        titleView.normalColor = (0, 0, 0)
+        titleView.selectColor = (255, 0, 0)
+        titleView.backgroundColor = UIColor.colorFromHex(0xf5f5f5)
         return titleView
     }()
 
