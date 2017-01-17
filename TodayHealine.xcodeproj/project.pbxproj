@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4FD1342C979B0E3AC1AEB050 /* Pods_TodayHealine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AF59DEE7DB6D89089216DA /* Pods_TodayHealine.framework */; };
+		CD5BAACE1E2DF168009809D2 /* RequstManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5BAACD1E2DF168009809D2 /* RequstManager.swift */; };
+		CD5BAAD01E2E15A9009809D2 /* BaseResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5BAACF1E2E15A9009809D2 /* BaseResponseObject.swift */; };
 		CD6249781E2C6A9E00E22002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6249771E2C6A9E00E22002 /* AppDelegate.swift */; };
 		CD62497D1E2C6A9E00E22002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD62497B1E2C6A9E00E22002 /* Main.storyboard */; };
 		CD62497F1E2C6A9E00E22002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD62497E1E2C6A9E00E22002 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 /* Begin PBXFileReference section */
 		506E541DCD7479D122137269 /* Pods-TodayHealine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayHealine.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayHealine/Pods-TodayHealine.release.xcconfig"; sourceTree = "<group>"; };
 		A3AF59DEE7DB6D89089216DA /* Pods_TodayHealine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayHealine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD5BAACD1E2DF168009809D2 /* RequstManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequstManager.swift; sourceTree = "<group>"; };
+		CD5BAACF1E2E15A9009809D2 /* BaseResponseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponseObject.swift; sourceTree = "<group>"; };
 		CD6249741E2C6A9E00E22002 /* TodayHealine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayHealine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6249771E2C6A9E00E22002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD62497C1E2C6A9E00E22002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,9 +140,9 @@
 		CDB3AD981E2C9FF50028E90C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CDB3AD9B1E2C9FF50028E90C /* Main */,
 				CDB3AD991E2C9FF50028E90C /* Follow */,
 				CDB3AD9A1E2C9FF50028E90C /* Home */,
-				CDB3AD9B1E2C9FF50028E90C /* Main */,
 				CDB3AD9C1E2C9FF50028E90C /* Me */,
 				CDB3AD9D1E2C9FF50028E90C /* Video */,
 			);
@@ -162,6 +166,7 @@
 		CDB3AD9B1E2C9FF50028E90C /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CD5BAACF1E2E15A9009809D2 /* BaseResponseObject.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 		CDB3ADA01E2C9FF50028E90C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CD5BAACD1E2DF168009809D2 /* RequstManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -503,6 +509,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD5BAACE1E2DF168009809D2 /* RequstManager.swift in Sources */,
 				CDB3ADC21E2CA1390028E90C /* HomeViewController.swift in Sources */,
 				CDB3ADCC1E2CA9290028E90C /* PageContentView.swift in Sources */,
 				CDB3ADCE1E2CA99E0028E90C /* PageTitleView.swift in Sources */,
@@ -514,6 +521,7 @@
 				CDB3ADC41E2CA1430028E90C /* VideoViewController.swift in Sources */,
 				CDB3ADC01E2CA1240028E90C /* MainNavigationController.swift in Sources */,
 				CDB3ADBE1E2CA1060028E90C /* MainTabBarController.swift in Sources */,
+				CD5BAAD01E2E15A9009809D2 /* BaseResponseObject.swift in Sources */,
 				CDB3ADC61E2CA14F0028E90C /* FollowViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
