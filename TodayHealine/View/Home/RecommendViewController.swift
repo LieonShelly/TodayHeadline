@@ -38,8 +38,9 @@ class RecommendViewController: UIViewController {
         view.backgroundColor
          = UIColor.random()
         let param = TestParam()
-        let req: Promise<[BaseResponseObject<TestResponseObj>]> = RequstManager.requst(Router.endpoint(param: nil, endPoint: param))
+        let req: Promise<[News]> = RequstManager.requst(Router.endpoint(param: nil, endPoint: param))
         req.then { obj -> Void in
+            print(obj.count)
             
             }.always {
                 

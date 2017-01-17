@@ -4,7 +4,7 @@
 //
 //  Created by lieon on 2017/1/17.
 //  Copyright © 2017年 ChangHongCloudTechService. All rights reserved.
-//
+//  swiftlint:disable force_unwrapping
 
 import UIKit
 import PromiseKit
@@ -18,10 +18,14 @@ class RequstManager: NSObject {
             switch dataResponse.result {
             case .success(let value):
                 guard let json = value as? [String: Any] else { return }
-                guard let dataArray = json["data"] as? [[String : Any]] else { return }
-                print(dataArray)
-                let obj = Mapper<T>().mapArray(JSONArray: dataArray)
-                fulfill(obj!)
+                guard let dataArray = json["data"] as? [[String : String]] else { return }
+                var objArray = [T]()
+                for dict in dataArray {
+                    guard let contentStr = dict["content"] else { continue }
+                    guard let obj = Mapper<T>().map(JSONString: contentStr) else { continue }
+                    objArray.append(obj)
+                }
+                fulfill(objArray)
             case .failure(let error):
                 print(error)
             }
@@ -37,7 +41,7 @@ enum Router: URLRequestConvertible {
     case endpoint(param: Mappable?, endPoint: EndPointProtocol)
     func asURLRequest() throws -> URLRequest {
         switch self {
-        case .endpoint(param: let param , endPoint: let endPoint):
+        case .endpoint(param: let param, endPoint: let endPoint):
             let url = URL(string: endPoint.baseURL)!
             var request = URLRequest(url: url)
             request.httpMethod = method.rawValue
@@ -46,7 +50,6 @@ enum Router: URLRequestConvertible {
         }
     }
 }
-
 
 protocol EndPointProtocol {
     var baseURL: String { get }

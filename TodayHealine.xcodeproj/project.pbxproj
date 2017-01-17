@@ -36,6 +36,7 @@
 		CDB3ADCE1E2CA99E0028E90C /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADCD1E2CA99E0028E90C /* PageTitleView.swift */; };
 		CDB3ADD01E2CAF0B0028E90C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADCF1E2CAF0B0028E90C /* Extension.swift */; };
 		CDB3ADD21E2CBBDD0028E90C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADD11E2CBBDD0028E90C /* RecommendViewController.swift */; };
+		CDFE8C251E2E44C3003BA2A3 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE8C241E2E44C3003BA2A3 /* News.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		CDB3ADCD1E2CA99E0028E90C /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		CDB3ADCF1E2CAF0B0028E90C /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CDB3ADD11E2CBBDD0028E90C /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		CDFE8C241E2E44C3003BA2A3 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		F198029347078D1222D49A81 /* Pods-TodayHealine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayHealine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayHealine/Pods-TodayHealine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 		CDB3AD9A1E2C9FF50028E90C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				CDFE8C241E2E44C3003BA2A3 /* News.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				CD5BAACE1E2DF168009809D2 /* RequstManager.swift in Sources */,
 				CDB3ADC21E2CA1390028E90C /* HomeViewController.swift in Sources */,
 				CDB3ADCC1E2CA9290028E90C /* PageContentView.swift in Sources */,
+				CDFE8C251E2E44C3003BA2A3 /* News.swift in Sources */,
 				CDB3ADCE1E2CA99E0028E90C /* PageTitleView.swift in Sources */,
 				CD6249781E2C6A9E00E22002 /* AppDelegate.swift in Sources */,
 				CDB3ADD01E2CAF0B0028E90C /* Extension.swift in Sources */,
