@@ -36,6 +36,15 @@
 		CDB3ADCE1E2CA99E0028E90C /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADCD1E2CA99E0028E90C /* PageTitleView.swift */; };
 		CDB3ADD01E2CAF0B0028E90C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADCF1E2CAF0B0028E90C /* Extension.swift */; };
 		CDB3ADD21E2CBBDD0028E90C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADD11E2CBBDD0028E90C /* RecommendViewController.swift */; };
+		CDBC1EF91E2F164600A2BCD0 /* StickTopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC1EF71E2F164600A2BCD0 /* StickTopTableViewCell.swift */; };
+		CDBC1EFA1E2F164600A2BCD0 /* StickTopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDBC1EF81E2F164600A2BCD0 /* StickTopTableViewCell.xib */; };
+		CDBC1EFF1E2F18DA00A2BCD0 /* RecommendVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC1EFD1E2F18DA00A2BCD0 /* RecommendVideoTableViewCell.swift */; };
+		CDBC1F001E2F18DA00A2BCD0 /* RecommendVideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDBC1EFE1E2F18DA00A2BCD0 /* RecommendVideoTableViewCell.xib */; };
+		CDBC1F031E2F1B2200A2BCD0 /* ThreeImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC1F011E2F1B2200A2BCD0 /* ThreeImageTableViewCell.swift */; };
+		CDBC1F041E2F1B2200A2BCD0 /* ThreeImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDBC1F021E2F1B2200A2BCD0 /* ThreeImageTableViewCell.xib */; };
+		CDBC1F071E2F1D3A00A2BCD0 /* OneImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC1F051E2F1D3A00A2BCD0 /* OneImageTableViewCell.swift */; };
+		CDBC1F081E2F1D3A00A2BCD0 /* OneImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDBC1F061E2F1D3A00A2BCD0 /* OneImageTableViewCell.xib */; };
+		CDBC1F0A1E2F1F0D00A2BCD0 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC1F091E2F1F0D00A2BCD0 /* Protocol.swift */; };
 		CDFE8C251E2E44C3003BA2A3 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE8C241E2E44C3003BA2A3 /* News.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +81,15 @@
 		CDB3ADCD1E2CA99E0028E90C /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
 		CDB3ADCF1E2CAF0B0028E90C /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CDB3ADD11E2CBBDD0028E90C /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
+		CDBC1EF71E2F164600A2BCD0 /* StickTopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickTopTableViewCell.swift; sourceTree = "<group>"; };
+		CDBC1EF81E2F164600A2BCD0 /* StickTopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StickTopTableViewCell.xib; sourceTree = "<group>"; };
+		CDBC1EFD1E2F18DA00A2BCD0 /* RecommendVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendVideoTableViewCell.swift; sourceTree = "<group>"; };
+		CDBC1EFE1E2F18DA00A2BCD0 /* RecommendVideoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RecommendVideoTableViewCell.xib; sourceTree = "<group>"; };
+		CDBC1F011E2F1B2200A2BCD0 /* ThreeImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeImageTableViewCell.swift; sourceTree = "<group>"; };
+		CDBC1F021E2F1B2200A2BCD0 /* ThreeImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThreeImageTableViewCell.xib; sourceTree = "<group>"; };
+		CDBC1F051E2F1D3A00A2BCD0 /* OneImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneImageTableViewCell.swift; sourceTree = "<group>"; };
+		CDBC1F061E2F1D3A00A2BCD0 /* OneImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneImageTableViewCell.xib; sourceTree = "<group>"; };
+		CDBC1F091E2F1F0D00A2BCD0 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		CDFE8C241E2E44C3003BA2A3 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		F198029347078D1222D49A81 /* Pods-TodayHealine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayHealine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayHealine/Pods-TodayHealine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,6 +209,7 @@
 		CDB3AD9E1E2C9FF50028E90C /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				CDBC1F091E2F1F0D00A2BCD0 /* Protocol.swift */,
 				CDB3AD9F1E2C9FF50028E90C /* Extension */,
 				CDB3ADA01E2C9FF50028E90C /* Network */,
 			);
@@ -240,6 +259,14 @@
 				CDB3ADA61E2C9FF50028E90C /* Home.storyboard */,
 				CDB3ADC11E2CA1390028E90C /* HomeViewController.swift */,
 				CDB3ADD11E2CBBDD0028E90C /* RecommendViewController.swift */,
+				CDBC1EF71E2F164600A2BCD0 /* StickTopTableViewCell.swift */,
+				CDBC1EF81E2F164600A2BCD0 /* StickTopTableViewCell.xib */,
+				CDBC1EFD1E2F18DA00A2BCD0 /* RecommendVideoTableViewCell.swift */,
+				CDBC1EFE1E2F18DA00A2BCD0 /* RecommendVideoTableViewCell.xib */,
+				CDBC1F011E2F1B2200A2BCD0 /* ThreeImageTableViewCell.swift */,
+				CDBC1F021E2F1B2200A2BCD0 /* ThreeImageTableViewCell.xib */,
+				CDBC1F051E2F1D3A00A2BCD0 /* OneImageTableViewCell.swift */,
+				CDBC1F061E2F1D3A00A2BCD0 /* OneImageTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -398,14 +425,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDBC1EFA1E2F164600A2BCD0 /* StickTopTableViewCell.xib in Resources */,
 				CD6249921E2C6F8700E22002 /* .swiftlint.yml in Resources */,
 				CDB3ADBB1E2C9FF50028E90C /* Video.storyboard in Resources */,
 				CDB3ADB91E2C9FF50028E90C /* Me.storyboard in Resources */,
+				CDBC1F001E2F18DA00A2BCD0 /* RecommendVideoTableViewCell.xib in Resources */,
 				CD6249821E2C6A9E00E22002 /* LaunchScreen.storyboard in Resources */,
 				CD62497F1E2C6A9E00E22002 /* Assets.xcassets in Resources */,
+				CDBC1F081E2F1D3A00A2BCD0 /* OneImageTableViewCell.xib in Resources */,
 				CD62498C1E2C6BC300E22002 /* Cartfile in Resources */,
 				CD62497D1E2C6A9E00E22002 /* Main.storyboard in Resources */,
 				CDB3ADB51E2C9FF50028E90C /* Follow.storyboard in Resources */,
+				CDBC1F041E2F1B2200A2BCD0 /* ThreeImageTableViewCell.xib in Resources */,
 				CDB3ADB71E2C9FF50028E90C /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,7 +545,9 @@
 			files = (
 				CD5BAACE1E2DF168009809D2 /* RequstManager.swift in Sources */,
 				CDB3ADC21E2CA1390028E90C /* HomeViewController.swift in Sources */,
+				CDBC1F031E2F1B2200A2BCD0 /* ThreeImageTableViewCell.swift in Sources */,
 				CDB3ADCC1E2CA9290028E90C /* PageContentView.swift in Sources */,
+				CDBC1EFF1E2F18DA00A2BCD0 /* RecommendVideoTableViewCell.swift in Sources */,
 				CDFE8C251E2E44C3003BA2A3 /* News.swift in Sources */,
 				CDB3ADCE1E2CA99E0028E90C /* PageTitleView.swift in Sources */,
 				CD6249781E2C6A9E00E22002 /* AppDelegate.swift in Sources */,
@@ -522,11 +555,14 @@
 				CDB3ADD21E2CBBDD0028E90C /* RecommendViewController.swift in Sources */,
 				CDB3ADC81E2CA15E0028E90C /* MeViewController.swift in Sources */,
 				CDB3ADCA1E2CA2000028E90C /* R.generated.swift in Sources */,
+				CDBC1EF91E2F164600A2BCD0 /* StickTopTableViewCell.swift in Sources */,
 				CDB3ADC41E2CA1430028E90C /* VideoViewController.swift in Sources */,
 				CDB3ADC01E2CA1240028E90C /* MainNavigationController.swift in Sources */,
+				CDBC1F071E2F1D3A00A2BCD0 /* OneImageTableViewCell.swift in Sources */,
 				CDB3ADBE1E2CA1060028E90C /* MainTabBarController.swift in Sources */,
 				CD5BAAD01E2E15A9009809D2 /* BaseResponseObject.swift in Sources */,
 				CDB3ADC61E2CA14F0028E90C /* FollowViewController.swift in Sources */,
+				CDBC1F0A1E2F1F0D00A2BCD0 /* Protocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

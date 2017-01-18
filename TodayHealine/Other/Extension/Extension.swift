@@ -8,6 +8,14 @@
 
 import UIKit
 
+extension UITableView {
+    func dequeueReuseableCell<T: UITableViewCell>(for indexPath: IndexPath) -> T where T:ViewNameReusable {
+        guard let cell = dequeueReusableCell(withIdentifier: T.reuseIndentifier, for: indexPath) as? T else {
+             fatalError("Could not dequeue cell with identifier: \(T.reuseIndentifier)")
+        }
+        return cell
+    }
+}
 extension UIScreen {
     static let width: CGFloat = UIScreen.main.bounds.width
     static let height: CGFloat = UIScreen.main.bounds.height

@@ -53,8 +53,37 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 0 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
   struct nib {
+    /// Nib `OneImageTableViewCell`.
+    static let oneImageTableViewCell = _R.nib._OneImageTableViewCell()
+    /// Nib `RecommendVideoTableViewCell`.
+    static let recommendVideoTableViewCell = _R.nib._RecommendVideoTableViewCell()
+    /// Nib `StickTopTableViewCell`.
+    static let stickTopTableViewCell = _R.nib._StickTopTableViewCell()
+    /// Nib `ThreeImageTableViewCell`.
+    static let threeImageTableViewCell = _R.nib._ThreeImageTableViewCell()
+    
+    /// `UINib(name: "OneImageTableViewCell", in: bundle)`
+    static func oneImageTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.oneImageTableViewCell)
+    }
+    
+    /// `UINib(name: "RecommendVideoTableViewCell", in: bundle)`
+    static func recommendVideoTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.recommendVideoTableViewCell)
+    }
+    
+    /// `UINib(name: "StickTopTableViewCell", in: bundle)`
+    static func stickTopTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.stickTopTableViewCell)
+    }
+    
+    /// `UINib(name: "ThreeImageTableViewCell", in: bundle)`
+    static func threeImageTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.threeImageTableViewCell)
+    }
+    
     fileprivate init() {}
   }
   
@@ -136,6 +165,50 @@ struct R: Rswift.Validatable {
 
 struct _R {
   struct nib {
+    struct _OneImageTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "OneImageTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> OneImageTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? OneImageTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _RecommendVideoTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "RecommendVideoTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> RecommendVideoTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RecommendVideoTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _StickTopTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "StickTopTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> StickTopTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? StickTopTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _ThreeImageTableViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "ThreeImageTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> ThreeImageTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ThreeImageTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
     fileprivate init() {}
   }
   
