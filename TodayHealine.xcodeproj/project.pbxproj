@@ -45,6 +45,8 @@
 		CDBC1F071E2F1D3A00A2BCD0 /* OneImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC1F051E2F1D3A00A2BCD0 /* OneImageTableViewCell.swift */; };
 		CDBC1F081E2F1D3A00A2BCD0 /* OneImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDBC1F061E2F1D3A00A2BCD0 /* OneImageTableViewCell.xib */; };
 		CDBC1F0A1E2F1F0D00A2BCD0 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC1F091E2F1F0D00A2BCD0 /* Protocol.swift */; };
+		CDDD99931E348BE500E10034 /* BoxEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD99921E348BE500E10034 /* BoxEnum.swift */; };
+		CDDD99951E34931F00E10034 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD99941E34931F00E10034 /* Transform.swift */; };
 		CDFE8C251E2E44C3003BA2A3 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE8C241E2E44C3003BA2A3 /* News.swift */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +92,8 @@
 		CDBC1F051E2F1D3A00A2BCD0 /* OneImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneImageTableViewCell.swift; sourceTree = "<group>"; };
 		CDBC1F061E2F1D3A00A2BCD0 /* OneImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OneImageTableViewCell.xib; sourceTree = "<group>"; };
 		CDBC1F091E2F1F0D00A2BCD0 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		CDDD99921E348BE500E10034 /* BoxEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxEnum.swift; sourceTree = "<group>"; };
+		CDDD99941E34931F00E10034 /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		CDFE8C241E2E44C3003BA2A3 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		F198029347078D1222D49A81 /* Pods-TodayHealine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayHealine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayHealine/Pods-TodayHealine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -180,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				CDFE8C241E2E44C3003BA2A3 /* News.swift */,
+				CDDD99921E348BE500E10034 /* BoxEnum.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 				CDBC1F091E2F1F0D00A2BCD0 /* Protocol.swift */,
 				CDB3AD9F1E2C9FF50028E90C /* Extension */,
 				CDB3ADA01E2C9FF50028E90C /* Network */,
+				CDDD99941E34931F00E10034 /* Transform.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -543,6 +549,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDDD99951E34931F00E10034 /* Transform.swift in Sources */,
 				CD5BAACE1E2DF168009809D2 /* RequstManager.swift in Sources */,
 				CDB3ADC21E2CA1390028E90C /* HomeViewController.swift in Sources */,
 				CDBC1F031E2F1B2200A2BCD0 /* ThreeImageTableViewCell.swift in Sources */,
@@ -556,6 +563,7 @@
 				CDB3ADC81E2CA15E0028E90C /* MeViewController.swift in Sources */,
 				CDB3ADCA1E2CA2000028E90C /* R.generated.swift in Sources */,
 				CDBC1EF91E2F164600A2BCD0 /* StickTopTableViewCell.swift in Sources */,
+				CDDD99931E348BE500E10034 /* BoxEnum.swift in Sources */,
 				CDB3ADC41E2CA1430028E90C /* VideoViewController.swift in Sources */,
 				CDB3ADC01E2CA1240028E90C /* MainNavigationController.swift in Sources */,
 				CDBC1F071E2F1D3A00A2BCD0 /* OneImageTableViewCell.swift in Sources */,

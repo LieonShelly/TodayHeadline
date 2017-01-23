@@ -3,3 +3,4 @@ github "Hearst-DD/ObjectMapper" ~> 2.2
 github "mxcl/PromiseKit" ~> 4.0
 github "SnapKit/SnapKit" ~> 3.1.2
 github "mac-cain13/R.swift.Library"
+github "onevcat/Kingfisher" ~> 3.0

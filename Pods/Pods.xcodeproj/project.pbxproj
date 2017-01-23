@@ -7,33 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23A4A6F11A963651997C2F7E6BAF4922 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		2DC2DC897E4C5258AE9F3F5A520C4052 /* Pods-TodayHealine-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A52513F0C744DD5BC90B954CDC586CFB /* Pods-TodayHealine-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70B5BD947E28E6D5CFA2C9FF83C9C74B /* Pods-TodayHealine-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A54B9EC4555681E16A36774DDBD3C54A /* Pods-TodayHealine-dummy.m */; };
+		002A5F4B1E714BB296CAC237D42AD05D /* LRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31560B84663BC3C18A85BE2402712094 /* LRefreshView.swift */; };
+		0CC87EA48B9184EA5EE2A6AAC0DB0BB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		0FCC2C81BD8CA7FE37675F9168E5D87A /* Pods-TodayHealine-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A54B9EC4555681E16A36774DDBD3C54A /* Pods-TodayHealine-dummy.m */; };
+		25A34B8246F85D9C51125286835EAE85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
+		52C45C46A2B8F7A89F634436522C8A6A /* LRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65ECCF2E1B82F6961C59FC76BACA287E /* LRefreshView.xib */; };
+		7C540AB64FDEEBF55564E69646819472 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		AFADE16F60C268C89EEC941A3D900303 /* LRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16BC7D5181B659093EBA8CE5C35E9D6A /* LRefresh-dummy.m */; };
+		C96E5D1D02A6B8C80AC5FA76ED72C4C6 /* LRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310A247FFFF4E3E46BD39264055E5493 /* LRefreshControl.swift */; };
+		D02406C38E71C63D1284D992840ADF57 /* Pods-TodayHealine-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A52513F0C744DD5BC90B954CDC586CFB /* Pods-TodayHealine-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E89A2F28FFBF3CAEEDE4DBDB8164EDD0 /* pulling.png in Resources */ = {isa = PBXBuildFile; fileRef = E9A75424B8C4BEA1AAE516F045D49DA6 /* pulling.png */; };
+		EAF69015814828A5881933BF211398D8 /* LRefresh-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 78476EE3E92D9553385A4A0D7FFB9F45 /* LRefresh-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C8462563A6B2471C5F780C275E7A234D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D8A081A8604DB06AE3125BE4D7D4271;
+			remoteInfo = LRefresh;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		16BC7D5181B659093EBA8CE5C35E9D6A /* LRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LRefresh-dummy.m"; sourceTree = "<group>"; };
 		1F79913998BF0A8C1F1025B473EB1560 /* Pods-TodayHealine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TodayHealine.debug.xcconfig"; sourceTree = "<group>"; };
 		24ABB77585A56C59B38AB2E33C64D78D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		310A247FFFF4E3E46BD39264055E5493 /* LRefreshControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRefreshControl.swift; path = Source/LRefreshControl.swift; sourceTree = "<group>"; };
+		31560B84663BC3C18A85BE2402712094 /* LRefreshView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRefreshView.swift; path = Source/LRefreshView.swift; sourceTree = "<group>"; };
 		3B3C1E65AD0FC4C81CF35958D8BC3DF1 /* Pods-TodayHealine-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TodayHealine-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4C7320699CF57FB3E656E3BE91A12188 /* Pods-TodayHealine.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TodayHealine.modulemap"; sourceTree = "<group>"; };
-		54E167D221142292D2DFB7C383CE535D /* Pods_TodayHealine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TodayHealine.framework; path = "Pods-TodayHealine.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		58CFF614F268B963C613E81C92805AAC /* LRefresh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LRefresh.modulemap; sourceTree = "<group>"; };
+		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		62000579CAEFDAA59BE45DD0CA862803 /* Pods-TodayHealine-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TodayHealine-resources.sh"; sourceTree = "<group>"; };
+		626C2CBBAEBBFD82B018E9330A132B43 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65ECCF2E1B82F6961C59FC76BACA287E /* LRefreshView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = LRefreshView.xib; path = Source/LRefreshView.xib; sourceTree = "<group>"; };
+		661482FADFF93DBF4C151DB81823B816 /* LRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LRefresh-prefix.pch"; sourceTree = "<group>"; };
+		78476EE3E92D9553385A4A0D7FFB9F45 /* LRefresh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LRefresh-umbrella.h"; sourceTree = "<group>"; };
+		7B160F1B337A42A59FBEB7A25A5E80DA /* LRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LRefresh.xcconfig; sourceTree = "<group>"; };
+		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		90109FE37B471E683FA20DB53ABB28B5 /* LRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LRefresh.framework; path = LRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9B58362319CA85E89A3931E35037171C /* Pods_TodayHealine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TodayHealine.framework; path = "Pods-TodayHealine.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A52513F0C744DD5BC90B954CDC586CFB /* Pods-TodayHealine-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TodayHealine-umbrella.h"; sourceTree = "<group>"; };
 		A54B9EC4555681E16A36774DDBD3C54A /* Pods-TodayHealine-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TodayHealine-dummy.m"; sourceTree = "<group>"; };
 		C7C29DFD7575C4770E484BA82E0E86BA /* Pods-TodayHealine-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TodayHealine-frameworks.sh"; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D0F862C95CFE3F9EEABAB627DE9C30C9 /* Pods-TodayHealine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TodayHealine.release.xcconfig"; sourceTree = "<group>"; };
+		E9A75424B8C4BEA1AAE516F045D49DA6 /* pulling.png */ = {isa = PBXFileReference; includeInIndex = 1; name = pulling.png; path = Source/Icons/pulling.png; sourceTree = "<group>"; };
 		FEF5AC024A2DB9B3C861389FB358D86E /* Pods-TodayHealine-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TodayHealine-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3FA912C1D701A82FE45522E713F32E34 /* Frameworks */ = {
+		8C0712B5838674E4B6962BF5741CE42E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23A4A6F11A963651997C2F7E6BAF4922 /* Foundation.framework in Frameworks */,
+				7C540AB64FDEEBF55564E69646819472 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1F550ED01E665C1BDF996BB00BF6A40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CC87EA48B9184EA5EE2A6AAC0DB0BB7 /* Foundation.framework in Frameworks */,
+				25A34B8246F85D9C51125286835EAE85 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,38 +87,76 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+		0B2B1124C18CFA1AEBFC5C1E1EBFD404 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+				65ECCF2E1B82F6961C59FC76BACA287E /* LRefreshView.xib */,
+				E9A75424B8C4BEA1AAE516F045D49DA6 /* pulling.png */,
 			);
-			name = iOS;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2E34118D26305E8BB21C3C7B9EA498D9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				626C2CBBAEBBFD82B018E9330A132B43 /* Info.plist */,
+				58CFF614F268B963C613E81C92805AAC /* LRefresh.modulemap */,
+				7B160F1B337A42A59FBEB7A25A5E80DA /* LRefresh.xcconfig */,
+				16BC7D5181B659093EBA8CE5C35E9D6A /* LRefresh-dummy.m */,
+				661482FADFF93DBF4C151DB81823B816 /* LRefresh-prefix.pch */,
+				78476EE3E92D9553385A4A0D7FFB9F45 /* LRefresh-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LRefresh";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6EE98446B568159EE277B68FD442AF0 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				94606860973CFED0817B5BF1D8DB0621 /* Products */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				EE019A8A168A269CDB11384B54A51ACB /* Pods */,
+				CFF0BDD51BB399AE358FB0FB7885654D /* Products */,
 				078E849AA1DFAFCAF560E551B903EDAC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		94606860973CFED0817B5BF1D8DB0621 /* Products */ = {
+		BD623CE473FB8D084DB24E1D03BE5045 /* LRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				54E167D221142292D2DFB7C383CE535D /* Pods_TodayHealine.framework */,
+				310A247FFFF4E3E46BD39264055E5493 /* LRefreshControl.swift */,
+				31560B84663BC3C18A85BE2402712094 /* LRefreshView.swift */,
+				0B2B1124C18CFA1AEBFC5C1E1EBFD404 /* Resources */,
+				2E34118D26305E8BB21C3C7B9EA498D9 /* Support Files */,
+			);
+			name = LRefresh;
+			path = LRefresh;
+			sourceTree = "<group>";
+		};
+		CFF0BDD51BB399AE358FB0FB7885654D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90109FE37B471E683FA20DB53ABB28B5 /* LRefresh.framework */,
+				9B58362319CA85E89A3931E35037171C /* Pods_TodayHealine.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		E6EE98446B568159EE277B68FD442AF0 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+				616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */,
+				7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		E703D433314134DCC033A2A00E8A24AF /* Pods-TodayHealine */ = {
@@ -100,35 +177,70 @@
 			path = "Target Support Files/Pods-TodayHealine";
 			sourceTree = "<group>";
 		};
+		EE019A8A168A269CDB11384B54A51ACB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD623CE473FB8D084DB24E1D03BE5045 /* LRefresh */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1E87BCB23416ECF83D1122D2A460D106 /* Headers */ = {
+		347985FBA3E2D5401A88B533E87B08FF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DC2DC897E4C5258AE9F3F5A520C4052 /* Pods-TodayHealine-umbrella.h in Headers */,
+				EAF69015814828A5881933BF211398D8 /* LRefresh-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1670DAB3DC3799ED1D3B65C0F993F01 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D02406C38E71C63D1284D992840ADF57 /* Pods-TodayHealine-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		6830EB971B7EAA881CF3984218E661DD /* Pods-TodayHealine */ = {
+		50443B804F3498FE2FEBCF4D565F0121 /* Pods-TodayHealine */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E753187D271E37F254C11B7A46F77DFF /* Build configuration list for PBXNativeTarget "Pods-TodayHealine" */;
+			buildConfigurationList = 7FFC22550718F2E595BA28D99E8423B6 /* Build configuration list for PBXNativeTarget "Pods-TodayHealine" */;
 			buildPhases = (
-				C0C73BA06A288D42634818690B5AB910 /* Sources */,
-				3FA912C1D701A82FE45522E713F32E34 /* Frameworks */,
-				1E87BCB23416ECF83D1122D2A460D106 /* Headers */,
+				B5F6CBC08877903EE79E32E62F285040 /* Sources */,
+				8C0712B5838674E4B6962BF5741CE42E /* Frameworks */,
+				E1670DAB3DC3799ED1D3B65C0F993F01 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F38BB7A140275EE5B870F48796C556A9 /* PBXTargetDependency */,
+			);
+			name = "Pods-TodayHealine";
+			productName = "Pods-TodayHealine";
+			productReference = 9B58362319CA85E89A3931E35037171C /* Pods_TodayHealine.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7D8A081A8604DB06AE3125BE4D7D4271 /* LRefresh */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9A9CB43D694212CEE215F8CF7AFEE1C /* Build configuration list for PBXNativeTarget "LRefresh" */;
+			buildPhases = (
+				39180AAD20F788FE7046F5E57D49D72B /* Sources */,
+				E1F550ED01E665C1BDF996BB00BF6A40 /* Frameworks */,
+				CCF7F129A6D88048335256CE69977817 /* Resources */,
+				347985FBA3E2D5401A88B533E87B08FF /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-TodayHealine";
-			productName = "Pods-TodayHealine";
-			productReference = 54E167D221142292D2DFB7C383CE535D /* Pods_TodayHealine.framework */;
+			name = LRefresh;
+			productName = LRefresh;
+			productReference = 90109FE37B471E683FA20DB53ABB28B5 /* LRefresh.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -148,28 +260,96 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 94606860973CFED0817B5BF1D8DB0621 /* Products */;
+			productRefGroup = CFF0BDD51BB399AE358FB0FB7885654D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6830EB971B7EAA881CF3984218E661DD /* Pods-TodayHealine */,
+				7D8A081A8604DB06AE3125BE4D7D4271 /* LRefresh */,
+				50443B804F3498FE2FEBCF4D565F0121 /* Pods-TodayHealine */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		CCF7F129A6D88048335256CE69977817 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C45C46A2B8F7A89F634436522C8A6A /* LRefreshView.xib in Resources */,
+				E89A2F28FFBF3CAEEDE4DBDB8164EDD0 /* pulling.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		C0C73BA06A288D42634818690B5AB910 /* Sources */ = {
+		39180AAD20F788FE7046F5E57D49D72B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70B5BD947E28E6D5CFA2C9FF83C9C74B /* Pods-TodayHealine-dummy.m in Sources */,
+				AFADE16F60C268C89EEC941A3D900303 /* LRefresh-dummy.m in Sources */,
+				C96E5D1D02A6B8C80AC5FA76ED72C4C6 /* LRefreshControl.swift in Sources */,
+				002A5F4B1E714BB296CAC237D42AD05D /* LRefreshView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5F6CBC08877903EE79E32E62F285040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FCC2C81BD8CA7FE37675F9168E5D87A /* Pods-TodayHealine-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F38BB7A140275EE5B870F48796C556A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LRefresh;
+			target = 7D8A081A8604DB06AE3125BE4D7D4271 /* LRefresh */;
+			targetProxy = C8462563A6B2471C5F780C275E7A234D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		23338A555962B921245C87192B271259 /* Release */ = {
+		2D529AC96A0A72A4B0287CDBF5754117 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F79913998BF0A8C1F1025B473EB1560 /* Pods-TodayHealine.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TodayHealine/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TodayHealine/Pods-TodayHealine.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TodayHealine;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		58D8B07BD794A8349F5FDEEB8AE0BBBC /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0F862C95CFE3F9EEABAB627DE9C30C9 /* Pods-TodayHealine.release.xcconfig */;
 			buildSettings = {
@@ -203,41 +383,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		375D4061CCFC234972588C631B67A0B0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F79913998BF0A8C1F1025B473EB1560 /* Pods-TodayHealine.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TodayHealine/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TodayHealine/Pods-TodayHealine.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TodayHealine;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -283,6 +428,39 @@
 			};
 			name = Debug;
 		};
+		9C9F80A7F2A510EB7E0735D3626FD328 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B160F1B337A42A59FBEB7A25A5E80DA /* LRefresh.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LRefresh/LRefresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LRefresh/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LRefresh/LRefresh.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = LRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -323,6 +501,38 @@
 			};
 			name = Release;
 		};
+		EA18BD7CF70BF8DE77470AD6B04E99C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B160F1B337A42A59FBEB7A25A5E80DA /* LRefresh.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/LRefresh/LRefresh-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LRefresh/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LRefresh/LRefresh.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = LRefresh;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -335,11 +545,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E753187D271E37F254C11B7A46F77DFF /* Build configuration list for PBXNativeTarget "Pods-TodayHealine" */ = {
+		7FFC22550718F2E595BA28D99E8423B6 /* Build configuration list for PBXNativeTarget "Pods-TodayHealine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				375D4061CCFC234972588C631B67A0B0 /* Debug */,
-				23338A555962B921245C87192B271259 /* Release */,
+				2D529AC96A0A72A4B0287CDBF5754117 /* Debug */,
+				58D8B07BD794A8349F5FDEEB8AE0BBBC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9A9CB43D694212CEE215F8CF7AFEE1C /* Build configuration list for PBXNativeTarget "LRefresh" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C9F80A7F2A510EB7E0735D3626FD328 /* Debug */,
+				EA18BD7CF70BF8DE77470AD6B04E99C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
