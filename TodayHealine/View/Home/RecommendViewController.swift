@@ -32,15 +32,10 @@ import Alamofire
 import PromiseKit
 import LRefresh
 
-class RecommendViewController: UIViewController {
+class RecommendViewController: HomeBaseTableViewController {
     fileprivate lazy var refresh: LRefreshControl = {
         let refresh = LRefreshControl()
         return refresh
-    }()
-   
-    fileprivate lazy var tableView: UITableView = {
-        let tab = UITableView(frame: self.view.bounds, style: .plain)
-        return tab
     }()
 
     override func viewDidLoad() {
@@ -57,9 +52,10 @@ class RecommendViewController: UIViewController {
             }.catch { error in
             print(error)
         }
-        
-        view.addSubview(tableView)
         tableView.addSubview(refresh)
- }
+  }
+}
 
+extension RecommendViewController {
+   
 }
