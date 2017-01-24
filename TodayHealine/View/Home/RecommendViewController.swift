@@ -40,8 +40,6 @@ class RecommendViewController: HomeBaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor
-         = UIColor.random()
         let param = TestParam()
         let req: Promise<[News]> = RequstManager.requst(Router.endpoint(param: nil, endPoint: param))
         req.then { obj -> Void in

@@ -16,32 +16,12 @@ class HomeBaseTableViewController: UITableViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupObserver()
+    
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        removeObserver()
-    }
-}
-
-extension HomeBaseTableViewController {
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "contentOffset" {
-//            print(tableView.contentOffset.y)
-            NotificationCenter.default.post(name: NSNotification.Name.init(Constant.NotificationName.HomeTableViewContOffsetYChanged), object: nil, userInfo: ["contentOffsetY": tableView.contentOffset.y])
-        }
-    }
-}
-
-extension HomeBaseTableViewController {
-    fileprivate  func setupObserver() {
-        tableView.addObserver(self, forKeyPath: "contentOffset", options: .new, context: nil)
-    }
-    
-    fileprivate  func removeObserver() {
-        self.removeObserver(tableView, forKeyPath: "contentOffset")
     }
 }
 
