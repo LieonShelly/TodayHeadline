@@ -26,9 +26,8 @@ extension HomeNaviBar {
     func setup(opacity: CGFloat) {
         backgroundColor = UIColor(white: 1, alpha: opacity)
         UIView.animate(withDuration: 0.1) {
-            if opacity == 1 {
+            if opacity > 0.7 {
                 self.searchBar.frame.origin.x = 20
-                print(self.searchBar.frame.origin.x)
             } else {
                 self.searchBar.frame.origin.x = -2000
                 

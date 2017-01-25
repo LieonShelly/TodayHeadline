@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+import PromiseKit
 
 class HomeViewModel {
     lazy var banners: [Banner] = [Banner]()
@@ -36,13 +37,21 @@ extension HomeViewModel {
             "pagesize": "20"
         ]
         
-        RequstManager.requset(urlStr: "http://open3.bantangapp.com/recommend/operationElement?", param: para) {[unowned self] (json, error) in
-            guard let dict = json as? [String: Any], let dataDict = dict["data"] as? [String: Any], let bannerArray = dataDict["banner"] as? [[String: Any]] else { return }
-            for bannerDictt: [String: Any] in bannerArray {
-                guard let banner = Mapper<Banner>().map(JSON: bannerDictt) else { continue }
-                self.banners.append(banner)
+        let req: Promise<BannerGroup> = RequstManager.requst("http://open3.bantangapp.com/recommend/operationElement?", param: para)
+        req.then { group -> Void in
+            if let banners = group.banner {
+                self.banners = banners
+                finished()
             }
-            finished()
+        }.catch { erro in
+            print(erro)
         }
+    }
+}
+
+fileprivate class BannerGroup: Model {
+    var banner: [Banner]?
+    fileprivate  override func mapping(map: Map) {
+        banner <- map["banner"]
     }
 }

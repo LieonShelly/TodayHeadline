@@ -12,25 +12,20 @@ import Alamofire
 import ObjectMapper
 
 class RequstManager: NSObject {
-    static func requst<T: Mappable>(_ router: Router) -> Promise<[T]> {
+    static func requst<T: Mappable>(_ urlStr: String, param: [String: Any]) -> Promise<T> {
         return Promise { fulfill, reject in
-           Alamofire.request(router.urlRequest!).validate().responseJSON(completionHandler: { dataResponse in
-            switch dataResponse.result {
-            case .success(let value):
-                guard let json = value as? [String: Any] else { return }
-                guard let dataArray = json["data"] as? [[String : String]] else { return }
-                var objArray = [T]()
-                for dict in dataArray {
-                    guard let contentStr = dict["content"] else { continue }
-                    guard let obj = Mapper<T>().map(JSONString: contentStr) else { continue }
-                    objArray.append(obj)
+            Alamofire.request(urlStr, method: HTTPMethod.get, parameters: param).responseJSON { response in
+                switch response.result {
+                case .success(let value):
+                    guard let json = value as? [String: Any], let dataJson = json["data"] as? [String: Any] else { return }
+                    guard let obj = Mapper<T>().map(JSON: dataJson) else { return }
+                    fulfill(obj)
+                case .failure(let error):
+                    print(error)
+                    reject(error)
                 }
-                fulfill(objArray)
-            case .failure(let error):
-                print(error)
             }
-           })
-    }
+      }
     }
     
     static func requset(urlStr: String, param: [String: Any], finished: @escaping (_ json

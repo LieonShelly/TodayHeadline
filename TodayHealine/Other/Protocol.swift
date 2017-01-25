@@ -27,25 +27,33 @@ protocol CycleCollectionViewCellProtocol {
      weak var imageView: UIImageView! {get set}
 }
 
+protocol RecommandTableViewCellProtocol {
+    weak var prictureView: UIImageView! {get set}
+    weak var firstButton: UIButton! {get set}
+    weak var secondButton: UIButton! {get set}
+    weak var thirdButton: UIButton! {get set}
+    weak var titleLabel: UILabel! {get set}
+}
+
 extension ViewNameReusable where Self: UIView {
     static var reuseIndentifier: String {
         return String(describing: self)
     }
 }
 
-extension View where Self: StickTopTableViewCell {
-    func getModel<M>(data: M) {
-         guard let model = data as? News else { return  }
-        titleLabel.text = model.title
-        tagLabel.text = model.label
-        commentLabel.text = "\(model.commentCount)评论"
-        sourceLabel.text = model.source
-        timeLabel.text = "\(model.publishTime)"
-    }
-}
 extension View where Self: CycleCollectionViewCell {
     func getModel<M>(data: M) {
         guard let model = data as? Banner else { return  }
         imageView.kf.setImage(with: model.photo)
+    }
+}
+extension View where Self: RecommandTableViewCell {
+    func getModel<M>(data: M) {
+        guard let model = data as? TopicModel else { return  }
+        prictureView.kf.setImage(with: model.picture)
+        titleLabel.text = model.title
+        firstButton.setTitle(model.user?.nickname, for: .normal)
+        secondButton.setTitle(model.views, for: .normal)
+        thirdButton.setTitle(model.praises, for: .normal)
     }
 }
