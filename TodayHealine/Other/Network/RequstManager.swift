@@ -32,6 +32,19 @@ class RequstManager: NSObject {
            })
     }
     }
+    
+    static func requset(urlStr: String, param: [String: Any], finished: @escaping (_ json
+        : Any?, _ error: Error?) -> Void) {
+        Alamofire.request(urlStr, method: HTTPMethod.get, parameters: param).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                finished(value, nil)
+            case .failure(let error):
+                print(error)
+                finished(nil, error)
+            }
+        }
+    }
 }
 
 enum Router: URLRequestConvertible {

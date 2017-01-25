@@ -43,12 +43,10 @@ class RecommendViewController: HomeBaseTableViewController {
         let param = TestParam()
         let req: Promise<[News]> = RequstManager.requst(Router.endpoint(param: nil, endPoint: param))
         req.then { obj -> Void in
-            print(obj.count)
             
             }.always {
                 
             }.catch { error in
-            print(error)
         }
         tableView.addSubview(refresh)
   }

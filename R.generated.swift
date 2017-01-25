@@ -53,8 +53,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 6 nibs.
   struct nib {
+    /// Nib `CycleCollectionViewCell`.
+    static let cycleCollectionViewCell = _R.nib._CycleCollectionViewCell()
+    /// Nib `CycleView`.
+    static let cycleView = _R.nib._CycleView()
     /// Nib `OneImageTableViewCell`.
     static let oneImageTableViewCell = _R.nib._OneImageTableViewCell()
     /// Nib `RecommendVideoTableViewCell`.
@@ -63,6 +67,16 @@ struct R: Rswift.Validatable {
     static let stickTopTableViewCell = _R.nib._StickTopTableViewCell()
     /// Nib `ThreeImageTableViewCell`.
     static let threeImageTableViewCell = _R.nib._ThreeImageTableViewCell()
+    
+    /// `UINib(name: "CycleCollectionViewCell", in: bundle)`
+    static func cycleCollectionViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.cycleCollectionViewCell)
+    }
+    
+    /// `UINib(name: "CycleView", in: bundle)`
+    static func cycleView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.cycleView)
+    }
     
     /// `UINib(name: "OneImageTableViewCell", in: bundle)`
     static func oneImageTableViewCell(_: Void = ()) -> UIKit.UINib {
@@ -165,6 +179,28 @@ struct R: Rswift.Validatable {
 
 struct _R {
   struct nib {
+    struct _CycleCollectionViewCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "CycleCollectionViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CycleCollectionViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CycleCollectionViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _CycleView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "CycleView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CycleView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CycleView
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _OneImageTableViewCell: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "OneImageTableViewCell"

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol ViewNameReusable: class { }
 
@@ -20,6 +21,10 @@ protocol StickTopTableViewCellProtocol {
     weak var tagLabel: UILabel! {get set}
     weak var commentLabel: UILabel! {get set}
     weak var sourceLabel: UILabel! {get set}
+}
+
+protocol CycleCollectionViewCellProtocol {
+     weak var imageView: UIImageView! {get set}
 }
 
 extension ViewNameReusable where Self: UIView {
@@ -36,5 +41,11 @@ extension View where Self: StickTopTableViewCell {
         commentLabel.text = "\(model.commentCount)评论"
         sourceLabel.text = model.source
         timeLabel.text = "\(model.publishTime)"
+    }
+}
+extension View where Self: CycleCollectionViewCell {
+    func getModel<M>(data: M) {
+        guard let model = data as? Banner else { return  }
+        imageView.kf.setImage(with: model.photo)
     }
 }

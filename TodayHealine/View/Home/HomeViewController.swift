@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import Alamofire
+import ObjectMapper
 
 private let bannerHeight: CGFloat = 64 + 150
 private let titleViewHeight: CGFloat = 44
 class HomeViewController: BaseViewController {
+    fileprivate lazy var homeVM: HomeViewModel = HomeViewModel()
     fileprivate lazy var tableViewArray: [UITableView] = [UITableView]()
     fileprivate var lastTableViewOffsetY: CGFloat = CGFloat()
-    fileprivate lazy var bannerView: UIView = {
-        let bannerView = UIView()
+    fileprivate lazy var bannerView: CycleView = {
+        let bannerView = CycleView.cycleView()
         bannerView.backgroundColor = UIColor.yellow
         bannerView.frame = CGRect(x: 0, y: 0, width: UIScreen.width, height: bannerHeight)
         return bannerView
@@ -55,6 +58,7 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         setupUI()
         setTapAction()
+        loadBanner()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,7 +76,6 @@ extension HomeViewController {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "contentOffset", let tableView = object as? UITableView {
             let offsetY = tableView.contentOffset.y
-            print(offsetY)
             lastTableViewOffsetY = offsetY
             if offsetY > -bannerHeight - titleViewHeight && offsetY < -(bannerHeight - titleViewHeight - 64) {
                 bannerView.frame.origin.y = 0 - bannerHeight - titleViewHeight -  offsetY
@@ -89,7 +92,6 @@ extension HomeViewController {
 extension HomeViewController {
     fileprivate  func setupUI() {
         automaticallyAdjustsScrollViewInsets = false
-        
         view.addSubview(contentView)
         view.addSubview(bannerView)
         view.addSubview(titleView)
@@ -98,7 +100,6 @@ extension HomeViewController {
     
     fileprivate func setTapAction() {
         titleView.titleTapAction = { [unowned self ] selectedIndex in
-            print("----lastTableViewOffsetY:\(self.lastTableViewOffsetY)")
             for tableView in self.tableViewArray {
                 tableView.contentOffset = CGPoint(x: 0, y: self.lastTableViewOffsetY)
                 let offsetY = self.lastTableViewOffsetY
@@ -126,6 +127,12 @@ extension HomeViewController {
                 }
             }
             self.titleView.setTitle(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndx)
+        }
+    }
+    
+    fileprivate  func loadBanner() {
+        homeVM.loadBanner { [unowned self] in
+            self.bannerView.banners = self.homeVM.banners
         }
     }
     
