@@ -19,6 +19,7 @@ class CycleView: UIView {
             collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
         }
     }
+    var tapAction: ((_ index: Int) -> Void)?
     @IBOutlet weak fileprivate var collectionView: UICollectionView!
     @IBOutlet weak fileprivate var pageControl: UIPageControl!
     fileprivate var cycleTimer: Timer?
@@ -84,7 +85,8 @@ extension CycleView: UICollectionViewDataSource {
 
 extension CycleView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let index = Int(indexPath.row % ((banners?.count) ?? 1))
+        tapAction?(index)
     }
 }
 
