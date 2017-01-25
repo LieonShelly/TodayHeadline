@@ -48,17 +48,90 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 0 images.
+  /// This `R.image` struct is generated, and contains static references to 10 images.
   struct image {
+    /// Image `daren`.
+    static let daren = Rswift.ImageResource(bundle: R.hostingBundle, name: "daren")
+    /// Image `home_email_black`.
+    static let home_email_black = Rswift.ImageResource(bundle: R.hostingBundle, name: "home_email_black")
+    /// Image `home_email_red`.
+    static let home_email_red = Rswift.ImageResource(bundle: R.hostingBundle, name: "home_email_red")
+    /// Image `home_search_icon`.
+    static let home_search_icon = Rswift.ImageResource(bundle: R.hostingBundle, name: "home_search_icon")
+    /// Image `pinglun`.
+    static let pinglun = Rswift.ImageResource(bundle: R.hostingBundle, name: "pinglun")
+    /// Image `shaidan`.
+    static let shaidan = Rswift.ImageResource(bundle: R.hostingBundle, name: "shaidan")
+    /// Image `share`.
+    static let share = Rswift.ImageResource(bundle: R.hostingBundle, name: "share")
+    /// Image `wenzhang`.
+    static let wenzhang = Rswift.ImageResource(bundle: R.hostingBundle, name: "wenzhang")
+    /// Image `zan2`.
+    static let zan2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "zan2")
+    /// Image `zan`.
+    static let zan = Rswift.ImageResource(bundle: R.hostingBundle, name: "zan")
+    
+    /// `UIImage(named: "daren", bundle: ..., traitCollection: ...)`
+    static func daren(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.daren, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "home_email_black", bundle: ..., traitCollection: ...)`
+    static func home_email_black(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.home_email_black, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "home_email_red", bundle: ..., traitCollection: ...)`
+    static func home_email_red(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.home_email_red, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "home_search_icon", bundle: ..., traitCollection: ...)`
+    static func home_search_icon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.home_search_icon, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "pinglun", bundle: ..., traitCollection: ...)`
+    static func pinglun(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.pinglun, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "shaidan", bundle: ..., traitCollection: ...)`
+    static func shaidan(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.shaidan, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "share", bundle: ..., traitCollection: ...)`
+    static func share(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.share, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "wenzhang", bundle: ..., traitCollection: ...)`
+    static func wenzhang(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.wenzhang, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "zan", bundle: ..., traitCollection: ...)`
+    static func zan(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.zan, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "zan2", bundle: ..., traitCollection: ...)`
+    static func zan2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.zan2, compatibleWith: traitCollection)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 6 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 7 nibs.
   struct nib {
     /// Nib `CycleCollectionViewCell`.
     static let cycleCollectionViewCell = _R.nib._CycleCollectionViewCell()
     /// Nib `CycleView`.
     static let cycleView = _R.nib._CycleView()
+    /// Nib `HomeNaviBar`.
+    static let homeNaviBar = _R.nib._HomeNaviBar()
     /// Nib `OneImageTableViewCell`.
     static let oneImageTableViewCell = _R.nib._OneImageTableViewCell()
     /// Nib `RecommendVideoTableViewCell`.
@@ -76,6 +149,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "CycleView", in: bundle)`
     static func cycleView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.cycleView)
+    }
+    
+    /// `UINib(name: "HomeNaviBar", in: bundle)`
+    static func homeNaviBar(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.homeNaviBar)
     }
     
     /// `UINib(name: "OneImageTableViewCell", in: bundle)`
@@ -166,7 +244,7 @@ struct R: Rswift.Validatable {
   
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
-      // There are no resources to validate
+      try _R.validate()
     }
     
     fileprivate init() {}
@@ -177,8 +255,16 @@ struct R: Rswift.Validatable {
   fileprivate init() {}
 }
 
-struct _R {
-  struct nib {
+struct _R: Rswift.Validatable {
+  static func validate() throws {
+    try nib.validate()
+  }
+  
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _HomeNaviBar.validate()
+    }
+    
     struct _CycleCollectionViewCell: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "CycleCollectionViewCell"
@@ -196,6 +282,22 @@ struct _R {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> CycleView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CycleView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _HomeNaviBar: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "HomeNaviBar"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> HomeNaviBar? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeNaviBar
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "home_email_black") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'home_email_black' is used in nib 'HomeNaviBar', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "home_search_icon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'home_search_icon' is used in nib 'HomeNaviBar', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

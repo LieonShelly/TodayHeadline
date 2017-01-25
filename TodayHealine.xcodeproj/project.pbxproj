@@ -57,6 +57,8 @@
 		CDBC1F0A1E2F1F0D00A2BCD0 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC1F091E2F1F0D00A2BCD0 /* Protocol.swift */; };
 		CDDD99931E348BE500E10034 /* BoxEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD99921E348BE500E10034 /* BoxEnum.swift */; };
 		CDDD99951E34931F00E10034 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD99941E34931F00E10034 /* Transform.swift */; };
+		CDEB19961E389569005F1D84 /* HomeNaviBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEB19951E389569005F1D84 /* HomeNaviBar.swift */; };
+		CDEB19981E389576005F1D84 /* HomeNaviBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDEB19971E389576005F1D84 /* HomeNaviBar.xib */; };
 		CDFE8C251E2E44C3003BA2A3 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE8C241E2E44C3003BA2A3 /* News.swift */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +116,8 @@
 		CDBC1F091E2F1F0D00A2BCD0 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		CDDD99921E348BE500E10034 /* BoxEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxEnum.swift; sourceTree = "<group>"; };
 		CDDD99941E34931F00E10034 /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
+		CDEB19951E389569005F1D84 /* HomeNaviBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNaviBar.swift; sourceTree = "<group>"; };
+		CDEB19971E389576005F1D84 /* HomeNaviBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeNaviBar.xib; sourceTree = "<group>"; };
 		CDFE8C241E2E44C3003BA2A3 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		F198029347078D1222D49A81 /* Pods-TodayHealine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayHealine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayHealine/Pods-TodayHealine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -300,6 +304,8 @@
 				CD4090121E38480A0045DD9E /* CycleView.xib */,
 				CD4090141E384A740045DD9E /* CycleCollectionViewCell.swift */,
 				CD4090151E384A740045DD9E /* CycleCollectionViewCell.xib */,
+				CDEB19951E389569005F1D84 /* HomeNaviBar.swift */,
+				CDEB19971E389576005F1D84 /* HomeNaviBar.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -473,6 +479,7 @@
 				CD62498C1E2C6BC300E22002 /* Cartfile in Resources */,
 				CD4090131E38480A0045DD9E /* CycleView.xib in Resources */,
 				CD62497D1E2C6A9E00E22002 /* Main.storyboard in Resources */,
+				CDEB19981E389576005F1D84 /* HomeNaviBar.xib in Resources */,
 				CDB3ADB51E2C9FF50028E90C /* Follow.storyboard in Resources */,
 				CDBC1F041E2F1B2200A2BCD0 /* ThreeImageTableViewCell.xib in Resources */,
 				CDB3ADB71E2C9FF50028E90C /* Home.storyboard in Resources */,
@@ -590,6 +597,7 @@
 				CDB4011A1E366C8B00B3667B /* BaseViewController.swift in Sources */,
 				CDBC1F031E2F1B2200A2BCD0 /* ThreeImageTableViewCell.swift in Sources */,
 				CDB3ADCC1E2CA9290028E90C /* PageContentView.swift in Sources */,
+				CDEB19961E389569005F1D84 /* HomeNaviBar.swift in Sources */,
 				CDBC1EFF1E2F18DA00A2BCD0 /* RecommendVideoTableViewCell.swift in Sources */,
 				CDFE8C251E2E44C3003BA2A3 /* News.swift in Sources */,
 				CDB401221E3676A600B3667B /* Constant.swift in Sources */,

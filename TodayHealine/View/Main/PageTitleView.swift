@@ -113,11 +113,6 @@ extension PageTitleView {
     }
     
     fileprivate  func setupBottomLineAndScrollLine() {
-        let bottomLine = UIView()
-        bottomLine.backgroundColor = UIColor.lightGray
-        let lineH: CGFloat = 0.5
-        bottomLine.frame = CGRect(x: 0, y: frame.height - lineH, width: frame.width, height: lineH)
-        scrollView.addSubview(bottomLine)
         guard let firtLabel = titleLabels.first else { return  }
         firtLabel.textColor = UIColor(red: selectColor.0 / 255.0, green: selectColor.1 / 255.0, blue: selectColor.2 / 255.0, alpha: 1)
         scrollView.addSubview(scrollLine)

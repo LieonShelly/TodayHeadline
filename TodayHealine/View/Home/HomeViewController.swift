@@ -54,6 +54,12 @@ class HomeViewController: BaseViewController {
         return titleView
     }()
 
+    fileprivate lazy var naviBar: HomeNaviBar = {
+        let naivBar = HomeNaviBar.naviBar()
+        naivBar.frame = CGRect(x: 0, y: 0, width: UIScreen.width, height: 64)
+        return naivBar
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -79,10 +85,14 @@ extension HomeViewController {
             lastTableViewOffsetY = offsetY
             if offsetY > -bannerHeight - titleViewHeight && offsetY < -(bannerHeight - titleViewHeight - 64) {
                 bannerView.frame.origin.y = 0 - bannerHeight - titleViewHeight -  offsetY
+                let tatio = -((1 / (-2 * titleViewHeight - 64)) * offsetY - (bannerHeight + titleViewHeight) / (2 * titleViewHeight + 64))
+                naviBar.setup(opacity: tatio)
             } else if offsetY >= -(bannerHeight - titleViewHeight - 64) {
                 bannerView.frame.origin.y = -(bannerHeight  - 64)
+                 naviBar.setup(opacity: 1)
             } else {
                  bannerView.frame.origin.y = 0
+                naviBar.setup(opacity: 0)
             }
          titleView.frame.origin.y = bannerView.frame.maxY
         }
@@ -95,6 +105,7 @@ extension HomeViewController {
         view.addSubview(contentView)
         view.addSubview(bannerView)
         view.addSubview(titleView)
+        view.addSubview(naviBar)
         
     }
     
