@@ -173,6 +173,8 @@ struct R: Rswift.Validatable {
   
   /// This `R.storyboard` struct is generated, and contains static references to 6 storyboards.
   struct storyboard {
+    /// Storyboard `Find`.
+    static let find = _R.storyboard.find()
     /// Storyboard `Follow`.
     static let follow = _R.storyboard.follow()
     /// Storyboard `Home`.
@@ -183,8 +185,11 @@ struct R: Rswift.Validatable {
     static let main = _R.storyboard.main()
     /// Storyboard `Me`.
     static let me = _R.storyboard.me()
-    /// Storyboard `Video`.
-    static let video = _R.storyboard.video()
+    
+    /// `UIStoryboard(name: "Find", bundle: ...)`
+    static func find(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.find)
+    }
     
     /// `UIStoryboard(name: "Follow", bundle: ...)`
     static func follow(_: Void = ()) -> UIKit.UIStoryboard {
@@ -209,11 +214,6 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "Me", bundle: ...)`
     static func me(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.me)
-    }
-    
-    /// `UIStoryboard(name: "Video", bundle: ...)`
-    static func video(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.video)
     }
     
     fileprivate init() {}
@@ -303,6 +303,15 @@ struct _R: Rswift.Validatable {
   }
   
   struct storyboard {
+    struct find: Rswift.StoryboardResourceWithInitialControllerType {
+      typealias InitialController = UIKit.UINavigationController
+      
+      let bundle = R.hostingBundle
+      let name = "Find"
+      
+      fileprivate init() {}
+    }
+    
     struct follow: Rswift.StoryboardResourceWithInitialControllerType {
       typealias InitialController = UIKit.UINavigationController
       
@@ -344,15 +353,6 @@ struct _R: Rswift.Validatable {
       
       let bundle = R.hostingBundle
       let name = "Me"
-      
-      fileprivate init() {}
-    }
-    
-    struct video: Rswift.StoryboardResourceWithInitialControllerType {
-      typealias InitialController = UIKit.UINavigationController
-      
-      let bundle = R.hostingBundle
-      let name = "Video"
       
       fileprivate init() {}
     }

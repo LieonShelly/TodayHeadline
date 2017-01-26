@@ -10,6 +10,11 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        automaticallyAdjustsScrollViewInsets = false
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
        navigationController?.delegate = self

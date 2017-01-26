@@ -35,6 +35,26 @@ protocol RecommandTableViewCellProtocol {
     weak var titleLabel: UILabel! {get set}
 }
 
+protocol BannerProtocol {
+    func imageURL() -> URL?
+}
+
+protocol EndPointProtocol {
+    var baseURL: String { get }
+    var path: String { get }
+    var endPoint: String { get }
+    func URL() -> String
+}
+
+extension EndPointProtocol {
+    var baseURL: String {
+        return "http://open3.bantangapp.com/"
+    }
+    func URL() -> String {
+        return baseURL + path + endPoint
+    }
+}
+
 extension ViewNameReusable where Self: UIView {
     static var reuseIndentifier: String {
         return String(describing: self)
@@ -43,8 +63,8 @@ extension ViewNameReusable where Self: UIView {
 
 extension View where Self: CycleCollectionViewCell {
     func getModel<M>(data: M) {
-        guard let model = data as? Banner else { return  }
-        imageView.kf.setImage(with: model.photo)
+        guard let model = data as? BannerProtocol else { return  }
+        imageView.kf.setImage(with: model.imageURL())
     }
 }
 extension View where Self: RecommandTableViewCell {

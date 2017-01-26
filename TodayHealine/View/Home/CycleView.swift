@@ -9,7 +9,7 @@
 import UIKit
 
 class CycleView: UIView {
-    var banners: [Banner]? {
+    var banners: [BannerProtocol]? {
         didSet {
             removeTimer()
             addTimer()

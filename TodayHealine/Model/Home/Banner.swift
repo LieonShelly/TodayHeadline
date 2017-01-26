@@ -9,12 +9,16 @@
 import UIKit
 import ObjectMapper
 
-class Banner: Model {
+class Banner: Model, BannerProtocol {
     var photo: URL?
     var title: String?
-    
+
     override func mapping(map: Map) {
         photo <- (map["photo"], URLTransform())
         title <- map["title"]
+    }
+    
+    func imageURL() -> URL? {
+        return self.photo
     }
 }

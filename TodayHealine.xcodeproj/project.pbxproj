@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4FD1342C979B0E3AC1AEB050 /* Pods_TodayHealine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3AF59DEE7DB6D89089216DA /* Pods_TodayHealine.framework */; };
+		CD002CFD1E399C950036DA44 /* Find.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD002CFC1E399C950036DA44 /* Find.storyboard */; };
+		CD002CFF1E399CB60036DA44 /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD002CFE1E399CB60036DA44 /* FindViewController.swift */; };
+		CD3A546D1E39CAFA0045C537 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3A546C1E39CAFA0045C537 /* Network.swift */; };
+		CD3A546F1E39CB2E0045C537 /* FindViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3A546E1E39CB2E0045C537 /* FindViewModel.swift */; };
 		CD4090111E3847FC0045DD9E /* CycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4090101E3847FC0045DD9E /* CycleView.swift */; };
 		CD4090131E38480A0045DD9E /* CycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD4090121E38480A0045DD9E /* CycleView.xib */; };
 		CD4090161E384A740045DD9E /* CycleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4090141E384A740045DD9E /* CycleCollectionViewCell.swift */; };
@@ -30,14 +34,13 @@
 		CD62499A1E2C768E00E22002 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6249951E2C768E00E22002 /* PromiseKit.framework */; };
 		CD62499B1E2C768E00E22002 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6249961E2C768E00E22002 /* Rswift.framework */; };
 		CD62499C1E2C768E00E22002 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6249971E2C768E00E22002 /* SnapKit.framework */; };
+		CD63E24B1E39DF2300F9E4E3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD63E24A1E39DF2300F9E4E3 /* Router.swift */; };
 		CDB3ADB51E2C9FF50028E90C /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB3ADA31E2C9FF50028E90C /* Follow.storyboard */; };
 		CDB3ADB71E2C9FF50028E90C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB3ADA61E2C9FF50028E90C /* Home.storyboard */; };
 		CDB3ADB91E2C9FF50028E90C /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB3ADAA1E2C9FF50028E90C /* Me.storyboard */; };
-		CDB3ADBB1E2C9FF50028E90C /* Video.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB3ADAD1E2C9FF50028E90C /* Video.storyboard */; };
 		CDB3ADBE1E2CA1060028E90C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADBD1E2CA1060028E90C /* MainTabBarController.swift */; };
 		CDB3ADC01E2CA1240028E90C /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADBF1E2CA1240028E90C /* MainNavigationController.swift */; };
 		CDB3ADC21E2CA1390028E90C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADC11E2CA1390028E90C /* HomeViewController.swift */; };
-		CDB3ADC41E2CA1430028E90C /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADC31E2CA1430028E90C /* VideoViewController.swift */; };
 		CDB3ADC61E2CA14F0028E90C /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADC51E2CA14F0028E90C /* FollowViewController.swift */; };
 		CDB3ADC81E2CA15E0028E90C /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADC71E2CA15E0028E90C /* MeViewController.swift */; };
 		CDB3ADCA1E2CA2000028E90C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADC91E2CA2000028E90C /* R.generated.swift */; };
@@ -60,6 +63,10 @@
 /* Begin PBXFileReference section */
 		506E541DCD7479D122137269 /* Pods-TodayHealine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayHealine.release.xcconfig"; path = "Pods/Target Support Files/Pods-TodayHealine/Pods-TodayHealine.release.xcconfig"; sourceTree = "<group>"; };
 		A3AF59DEE7DB6D89089216DA /* Pods_TodayHealine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodayHealine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD002CFC1E399C950036DA44 /* Find.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Find.storyboard; sourceTree = "<group>"; };
+		CD002CFE1E399CB60036DA44 /* FindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
+		CD3A546C1E39CAFA0045C537 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		CD3A546E1E39CB2E0045C537 /* FindViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindViewModel.swift; sourceTree = "<group>"; };
 		CD4090101E3847FC0045DD9E /* CycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleView.swift; sourceTree = "<group>"; };
 		CD4090121E38480A0045DD9E /* CycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CycleView.xib; sourceTree = "<group>"; };
 		CD4090141E384A740045DD9E /* CycleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -84,14 +91,13 @@
 		CD6249951E2C768E00E22002 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		CD6249961E2C768E00E22002 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
 		CD6249971E2C768E00E22002 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		CD63E24A1E39DF2300F9E4E3 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		CDB3ADA31E2C9FF50028E90C /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
 		CDB3ADA61E2C9FF50028E90C /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		CDB3ADAA1E2C9FF50028E90C /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
-		CDB3ADAD1E2C9FF50028E90C /* Video.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Video.storyboard; sourceTree = "<group>"; };
 		CDB3ADBD1E2CA1060028E90C /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CDB3ADBF1E2CA1240028E90C /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		CDB3ADC11E2CA1390028E90C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		CDB3ADC31E2CA1430028E90C /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		CDB3ADC51E2CA14F0028E90C /* FollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
 		CDB3ADC71E2CA15E0028E90C /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		CDB3ADC91E2CA2000028E90C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -136,6 +142,23 @@
 				506E541DCD7479D122137269 /* Pods-TodayHealine.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD002CF21E399B530036DA44 /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				CD002CFC1E399C950036DA44 /* Find.storyboard */,
+				CD002CFE1E399CB60036DA44 /* FindViewController.swift */,
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
+		CD3A546B1E39A49A0045C537 /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				CD3A546E1E39CB2E0045C537 /* FindViewModel.swift */,
+			);
+			path = Find;
 			sourceTree = "<group>";
 		};
 		CD4BFC4F1E38EEAC00EF4DF2 /* Cells */ = {
@@ -260,6 +283,8 @@
 			isa = PBXGroup;
 			children = (
 				CD5BAACD1E2DF168009809D2 /* RequstManager.swift */,
+				CD3A546C1E39CAFA0045C537 /* Network.swift */,
+				CD63E24A1E39DF2300F9E4E3 /* Router.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -269,7 +294,7 @@
 			children = (
 				CDB3ADA81E2C9FF50028E90C /* Main */,
 				CDB3ADA51E2C9FF50028E90C /* Home */,
-				CDB3ADAC1E2C9FF50028E90C /* Video */,
+				CD002CF21E399B530036DA44 /* Find */,
 				CDB3ADA21E2C9FF50028E90C /* Follow */,
 				CDB3ADA91E2C9FF50028E90C /* Me */,
 			);
@@ -324,23 +349,14 @@
 			path = Me;
 			sourceTree = "<group>";
 		};
-		CDB3ADAC1E2C9FF50028E90C /* Video */ = {
-			isa = PBXGroup;
-			children = (
-				CDB3ADAD1E2C9FF50028E90C /* Video.storyboard */,
-				CDB3ADC31E2CA1430028E90C /* VideoViewController.swift */,
-			);
-			path = Video;
-			sourceTree = "<group>";
-		};
 		CDB3ADAF1E2C9FF50028E90C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CD3A546B1E39A49A0045C537 /* Find */,
 				CDB3ADB01E2C9FF50028E90C /* Follow */,
 				CDB3ADB11E2C9FF50028E90C /* Home */,
 				CDB3ADB21E2C9FF50028E90C /* Main */,
 				CDB3ADB31E2C9FF50028E90C /* Me */,
-				CDB3ADB41E2C9FF50028E90C /* Video */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -373,13 +389,6 @@
 			children = (
 			);
 			path = Me;
-			sourceTree = "<group>";
-		};
-		CDB3ADB41E2C9FF50028E90C /* Video */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Video;
 			sourceTree = "<group>";
 		};
 		F65FC8F29E9C615CDE534977 /* Frameworks */ = {
@@ -461,7 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD6249921E2C6F8700E22002 /* .swiftlint.yml in Resources */,
-				CDB3ADBB1E2C9FF50028E90C /* Video.storyboard in Resources */,
+				CD002CFD1E399C950036DA44 /* Find.storyboard in Resources */,
 				CDB3ADB91E2C9FF50028E90C /* Me.storyboard in Resources */,
 				CD4090171E384A740045DD9E /* CycleCollectionViewCell.xib in Resources */,
 				CD6249821E2C6A9E00E22002 /* LaunchScreen.storyboard in Resources */,
@@ -581,11 +590,13 @@
 			files = (
 				CDDD99951E34931F00E10034 /* Transform.swift in Sources */,
 				CD5BAACE1E2DF168009809D2 /* RequstManager.swift in Sources */,
+				CD002CFF1E399CB60036DA44 /* FindViewController.swift in Sources */,
 				CD4090191E386F010045DD9E /* Banner.swift in Sources */,
 				CD4BFC4E1E38E7BD00EF4DF2 /* HomeRecommendModel.swift in Sources */,
 				CDB3ADC21E2CA1390028E90C /* HomeViewController.swift in Sources */,
 				CDB401201E36754600B3667B /* HomeViewModel.swift in Sources */,
 				CDB4011A1E366C8B00B3667B /* BaseViewController.swift in Sources */,
+				CD63E24B1E39DF2300F9E4E3 /* Router.swift in Sources */,
 				CDB3ADCC1E2CA9290028E90C /* PageContentView.swift in Sources */,
 				CDEB19961E389569005F1D84 /* HomeNaviBar.swift in Sources */,
 				CDFE8C251E2E44C3003BA2A3 /* News.swift in Sources */,
@@ -598,8 +609,9 @@
 				CDB3ADC81E2CA15E0028E90C /* MeViewController.swift in Sources */,
 				CDB3ADCA1E2CA2000028E90C /* R.generated.swift in Sources */,
 				CDDD99931E348BE500E10034 /* BoxEnum.swift in Sources */,
+				CD3A546D1E39CAFA0045C537 /* Network.swift in Sources */,
 				CD4090111E3847FC0045DD9E /* CycleView.swift in Sources */,
-				CDB3ADC41E2CA1430028E90C /* VideoViewController.swift in Sources */,
+				CD3A546F1E39CB2E0045C537 /* FindViewModel.swift in Sources */,
 				CDB3ADC01E2CA1240028E90C /* MainNavigationController.swift in Sources */,
 				CDB3ADBE1E2CA1060028E90C /* MainTabBarController.swift in Sources */,
 				CD5BAAD01E2E15A9009809D2 /* BaseResponseObject.swift in Sources */,
