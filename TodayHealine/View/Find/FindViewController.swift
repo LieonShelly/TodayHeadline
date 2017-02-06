@@ -35,10 +35,6 @@ class FindViewController: BaseViewController {
             contentView.backgroundColor = UIColor.random()
         return contentView
     }()
-    fileprivate lazy var segmentTitleView: PageTitleView = {
-        let titleView = PageTitleView(frame: CGRect(x: 0, y: Int(segmenTitleViewY), width: Int(self.segmentContentView.bounds.width), height: Int(segmenTitleViewHeight)), titles: ["最新", "热门", "关注"])
-        return titleView
-    }()
 
     fileprivate lazy var segmentContentView: PageContentView = {[unowned self] in
         var childVCs = [UITableViewController]()
@@ -78,9 +74,8 @@ extension FindViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-         guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: R.nib.labelAndBottomTableViewHeaderView.name)  as? LabelAndBottomTableViewHeaderView else { return  nil }
-        headerView.contentView.backgroundColor = UIColor.white
-        return headerView
+        let titleView = SegmentView(frame: CGRect(x: 0, y: 0, width: Int(UIScreen.width), height: Int(segmenTitleViewHeight)), titles: ["最新", "热门", "关注"])
+        return titleView
     }
     
 }
@@ -99,7 +94,6 @@ extension FindViewController {
     fileprivate func setupUI() {
         view.addSubview(tableView)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.register(R.nib.labelAndBottomTableViewHeaderView(), forHeaderFooterViewReuseIdentifier: R.nib.labelAndBottomTableViewHeaderView.name)
     }
     
     fileprivate func loadData() {
