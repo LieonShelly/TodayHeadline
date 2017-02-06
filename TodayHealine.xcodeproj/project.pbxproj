@@ -35,13 +35,18 @@
 		CD62499B1E2C768E00E22002 /* Rswift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6249961E2C768E00E22002 /* Rswift.framework */; };
 		CD62499C1E2C768E00E22002 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6249971E2C768E00E22002 /* SnapKit.framework */; };
 		CD63E24B1E39DF2300F9E4E3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD63E24A1E39DF2300F9E4E3 /* Router.swift */; };
+		CD6DE2B81E45AAF1007F91F5 /* LatestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6DE2B71E45AAF1007F91F5 /* LatestViewController.swift */; };
+		CD6DE2BA1E45AAFD007F91F5 /* HotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6DE2B91E45AAFD007F91F5 /* HotViewController.swift */; };
+		CD6DE2BC1E45AB0E007F91F5 /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6DE2BB1E45AB0E007F91F5 /* FollowViewController.swift */; };
+		CD6DE2BE1E45ABF7007F91F5 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6DE2BD1E45ABF7007F91F5 /* BaseTableViewController.swift */; };
+		CD6DE2C01E45B495007F91F5 /* LabelAndBottomTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6DE2BF1E45B495007F91F5 /* LabelAndBottomTableViewHeaderView.swift */; };
+		CD6DE2C21E45B4A9007F91F5 /* LabelAndBottomTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6DE2C11E45B4A9007F91F5 /* LabelAndBottomTableViewHeaderView.xib */; };
 		CDB3ADB51E2C9FF50028E90C /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB3ADA31E2C9FF50028E90C /* Follow.storyboard */; };
 		CDB3ADB71E2C9FF50028E90C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB3ADA61E2C9FF50028E90C /* Home.storyboard */; };
 		CDB3ADB91E2C9FF50028E90C /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB3ADAA1E2C9FF50028E90C /* Me.storyboard */; };
 		CDB3ADBE1E2CA1060028E90C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADBD1E2CA1060028E90C /* MainTabBarController.swift */; };
 		CDB3ADC01E2CA1240028E90C /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADBF1E2CA1240028E90C /* MainNavigationController.swift */; };
 		CDB3ADC21E2CA1390028E90C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADC11E2CA1390028E90C /* HomeViewController.swift */; };
-		CDB3ADC61E2CA14F0028E90C /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADC51E2CA14F0028E90C /* FollowViewController.swift */; };
 		CDB3ADC81E2CA15E0028E90C /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADC71E2CA15E0028E90C /* MeViewController.swift */; };
 		CDB3ADCA1E2CA2000028E90C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADC91E2CA2000028E90C /* R.generated.swift */; };
 		CDB3ADCC1E2CA9290028E90C /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADCB1E2CA9290028E90C /* PageContentView.swift */; };
@@ -49,7 +54,6 @@
 		CDB3ADD01E2CAF0B0028E90C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADCF1E2CAF0B0028E90C /* Extension.swift */; };
 		CDB3ADD21E2CBBDD0028E90C /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB3ADD11E2CBBDD0028E90C /* RecommendViewController.swift */; };
 		CDB4011A1E366C8B00B3667B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB401191E366C8B00B3667B /* BaseViewController.swift */; };
-		CDB4011E1E3673BE00B3667B /* HomeBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4011D1E3673BE00B3667B /* HomeBaseTableViewController.swift */; };
 		CDB401201E36754600B3667B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4011F1E36754600B3667B /* HomeViewModel.swift */; };
 		CDB401221E3676A600B3667B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB401211E3676A600B3667B /* Constant.swift */; };
 		CDBC1F0A1E2F1F0D00A2BCD0 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC1F091E2F1F0D00A2BCD0 /* Protocol.swift */; };
@@ -92,13 +96,18 @@
 		CD6249961E2C768E00E22002 /* Rswift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rswift.framework; path = Carthage/Build/iOS/Rswift.framework; sourceTree = "<group>"; };
 		CD6249971E2C768E00E22002 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		CD63E24A1E39DF2300F9E4E3 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		CD6DE2B71E45AAF1007F91F5 /* LatestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatestViewController.swift; sourceTree = "<group>"; };
+		CD6DE2B91E45AAFD007F91F5 /* HotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotViewController.swift; sourceTree = "<group>"; };
+		CD6DE2BB1E45AB0E007F91F5 /* FollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
+		CD6DE2BD1E45ABF7007F91F5 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		CD6DE2BF1E45B495007F91F5 /* LabelAndBottomTableViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelAndBottomTableViewHeaderView.swift; sourceTree = "<group>"; };
+		CD6DE2C11E45B4A9007F91F5 /* LabelAndBottomTableViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelAndBottomTableViewHeaderView.xib; sourceTree = "<group>"; };
 		CDB3ADA31E2C9FF50028E90C /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
 		CDB3ADA61E2C9FF50028E90C /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		CDB3ADAA1E2C9FF50028E90C /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
 		CDB3ADBD1E2CA1060028E90C /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		CDB3ADBF1E2CA1240028E90C /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		CDB3ADC11E2CA1390028E90C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		CDB3ADC51E2CA14F0028E90C /* FollowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
 		CDB3ADC71E2CA15E0028E90C /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		CDB3ADC91E2CA2000028E90C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		CDB3ADCB1E2CA9290028E90C /* PageContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
@@ -106,7 +115,6 @@
 		CDB3ADCF1E2CAF0B0028E90C /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		CDB3ADD11E2CBBDD0028E90C /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		CDB401191E366C8B00B3667B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		CDB4011D1E3673BE00B3667B /* HomeBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBaseTableViewController.swift; sourceTree = "<group>"; };
 		CDB4011F1E36754600B3667B /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CDB401211E3676A600B3667B /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		CDBC1F091E2F1F0D00A2BCD0 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
@@ -149,6 +157,9 @@
 			children = (
 				CD002CFC1E399C950036DA44 /* Find.storyboard */,
 				CD002CFE1E399CB60036DA44 /* FindViewController.swift */,
+				CD6DE2B71E45AAF1007F91F5 /* LatestViewController.swift */,
+				CD6DE2B91E45AAFD007F91F5 /* HotViewController.swift */,
+				CD6DE2BB1E45AB0E007F91F5 /* FollowViewController.swift */,
 			);
 			path = Find;
 			sourceTree = "<group>";
@@ -305,7 +316,6 @@
 			isa = PBXGroup;
 			children = (
 				CDB3ADA31E2C9FF50028E90C /* Follow.storyboard */,
-				CDB3ADC51E2CA14F0028E90C /* FollowViewController.swift */,
 			);
 			path = Follow;
 			sourceTree = "<group>";
@@ -315,7 +325,6 @@
 			children = (
 				CD4BFC4F1E38EEAC00EF4DF2 /* Cells */,
 				CDB3ADA61E2C9FF50028E90C /* Home.storyboard */,
-				CDB4011D1E3673BE00B3667B /* HomeBaseTableViewController.swift */,
 				CDB3ADC11E2CA1390028E90C /* HomeViewController.swift */,
 				CDB3ADD11E2CBBDD0028E90C /* RecommendViewController.swift */,
 				CD4090101E3847FC0045DD9E /* CycleView.swift */,
@@ -336,6 +345,9 @@
 				CDB3ADCB1E2CA9290028E90C /* PageContentView.swift */,
 				CDB3ADCD1E2CA99E0028E90C /* PageTitleView.swift */,
 				CDB401191E366C8B00B3667B /* BaseViewController.swift */,
+				CD6DE2BD1E45ABF7007F91F5 /* BaseTableViewController.swift */,
+				CD6DE2BF1E45B495007F91F5 /* LabelAndBottomTableViewHeaderView.swift */,
+				CD6DE2C11E45B4A9007F91F5 /* LabelAndBottomTableViewHeaderView.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -474,6 +486,7 @@
 				CDB3ADB91E2C9FF50028E90C /* Me.storyboard in Resources */,
 				CD4090171E384A740045DD9E /* CycleCollectionViewCell.xib in Resources */,
 				CD6249821E2C6A9E00E22002 /* LaunchScreen.storyboard in Resources */,
+				CD6DE2C21E45B4A9007F91F5 /* LabelAndBottomTableViewHeaderView.xib in Resources */,
 				CD62497F1E2C6A9E00E22002 /* Assets.xcassets in Resources */,
 				CD62498C1E2C6BC300E22002 /* Cartfile in Resources */,
 				CD4090131E38480A0045DD9E /* CycleView.xib in Resources */,
@@ -602,22 +615,25 @@
 				CDFE8C251E2E44C3003BA2A3 /* News.swift in Sources */,
 				CDB401221E3676A600B3667B /* Constant.swift in Sources */,
 				CDB3ADCE1E2CA99E0028E90C /* PageTitleView.swift in Sources */,
+				CD6DE2B81E45AAF1007F91F5 /* LatestViewController.swift in Sources */,
 				CD6249781E2C6A9E00E22002 /* AppDelegate.swift in Sources */,
 				CD40901B1E38703B0045DD9E /* RecomandViewModel.swift in Sources */,
+				CD6DE2BE1E45ABF7007F91F5 /* BaseTableViewController.swift in Sources */,
 				CDB3ADD01E2CAF0B0028E90C /* Extension.swift in Sources */,
 				CDB3ADD21E2CBBDD0028E90C /* RecommendViewController.swift in Sources */,
 				CDB3ADC81E2CA15E0028E90C /* MeViewController.swift in Sources */,
+				CD6DE2BA1E45AAFD007F91F5 /* HotViewController.swift in Sources */,
 				CDB3ADCA1E2CA2000028E90C /* R.generated.swift in Sources */,
 				CDDD99931E348BE500E10034 /* BoxEnum.swift in Sources */,
+				CD6DE2C01E45B495007F91F5 /* LabelAndBottomTableViewHeaderView.swift in Sources */,
 				CD3A546D1E39CAFA0045C537 /* Network.swift in Sources */,
 				CD4090111E3847FC0045DD9E /* CycleView.swift in Sources */,
 				CD3A546F1E39CB2E0045C537 /* FindViewModel.swift in Sources */,
 				CDB3ADC01E2CA1240028E90C /* MainNavigationController.swift in Sources */,
+				CD6DE2BC1E45AB0E007F91F5 /* FollowViewController.swift in Sources */,
 				CDB3ADBE1E2CA1060028E90C /* MainTabBarController.swift in Sources */,
 				CD5BAAD01E2E15A9009809D2 /* BaseResponseObject.swift in Sources */,
-				CDB3ADC61E2CA14F0028E90C /* FollowViewController.swift in Sources */,
 				CD4BFC521E38EECA00EF4DF2 /* RecommandTableViewCell.swift in Sources */,
-				CDB4011E1E3673BE00B3667B /* HomeBaseTableViewController.swift in Sources */,
 				CDBC1F0A1E2F1F0D00A2BCD0 /* Protocol.swift in Sources */,
 				CD4090161E384A740045DD9E /* CycleCollectionViewCell.swift in Sources */,
 			);

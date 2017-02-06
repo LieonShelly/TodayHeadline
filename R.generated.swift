@@ -124,7 +124,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
   struct nib {
     /// Nib `CycleCollectionViewCell`.
     static let cycleCollectionViewCell = _R.nib._CycleCollectionViewCell()
@@ -132,6 +132,8 @@ struct R: Rswift.Validatable {
     static let cycleView = _R.nib._CycleView()
     /// Nib `HomeNaviBar`.
     static let homeNaviBar = _R.nib._HomeNaviBar()
+    /// Nib `LabelAndBottomTableViewHeaderView`.
+    static let labelAndBottomTableViewHeaderView = _R.nib._LabelAndBottomTableViewHeaderView()
     /// Nib `RecommandTableViewCell`.
     static let recommandTableViewCell = _R.nib._RecommandTableViewCell()
     
@@ -148,6 +150,11 @@ struct R: Rswift.Validatable {
     /// `UINib(name: "HomeNaviBar", in: bundle)`
     static func homeNaviBar(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.homeNaviBar)
+    }
+    
+    /// `UINib(name: "LabelAndBottomTableViewHeaderView", in: bundle)`
+    static func labelAndBottomTableViewHeaderView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.labelAndBottomTableViewHeaderView)
     }
     
     /// `UINib(name: "RecommandTableViewCell", in: bundle)`
@@ -280,6 +287,17 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "home_email_black") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'home_email_black' is used in nib 'HomeNaviBar', but couldn't be loaded.") }
         if UIKit.UIImage(named: "home_search_icon") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'home_search_icon' is used in nib 'HomeNaviBar', but couldn't be loaded.") }
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _LabelAndBottomTableViewHeaderView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "LabelAndBottomTableViewHeaderView"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> LabelAndBottomTableViewHeaderView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? LabelAndBottomTableViewHeaderView
       }
       
       fileprivate init() {}

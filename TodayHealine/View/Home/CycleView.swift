@@ -95,7 +95,6 @@ extension CycleView {
         cycleTimer = Timer(timeInterval: 2.0, target: self, selector: #selector(self.timerAction), userInfo: nil, repeats: true)
          guard let timer = cycleTimer else { return  }
         RunLoop.main.add(timer, forMode: RunLoopMode.commonModes)
-        
     }
     
     fileprivate  func removeTimer() {

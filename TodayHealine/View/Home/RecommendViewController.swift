@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RecommendViewController: HomeBaseTableViewController {
+class RecommendViewController: BaseTableViewController {
     fileprivate lazy var recommandVM: RecomandViewModel =  RecomandViewModel()
     
     override func viewDidLoad() {

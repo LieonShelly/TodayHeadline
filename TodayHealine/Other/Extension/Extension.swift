@@ -15,7 +15,17 @@ extension UITableView {
         }
         return cell
     }
+    
+    func dequeueReuseableHeaderFooter<T: UITableViewHeaderFooterView>(for indexPath: IndexPath) -> T where T: ViewNameReusable {
+         guard let cell = dequeueReusableHeaderFooterView(withIdentifier: T.reuseIndentifier) as? T else { fatalError("Could not dequeue HeaderFooterView with identifier: \(T.reuseIndentifier)")  }
+        return cell
+    }
 }
+
+extension UITabBar {
+    static let height: CGFloat = 44
+}
+
 extension UIScreen {
     static let width: CGFloat = UIScreen.main.bounds.width
     static let height: CGFloat = UIScreen.main.bounds.height
