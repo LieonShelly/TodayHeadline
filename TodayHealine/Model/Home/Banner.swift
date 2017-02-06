@@ -22,3 +22,11 @@ class Banner: Model, BannerProtocol {
         return self.photo
     }
 }
+
+class BannerGroup: Model {
+    var banner: [Banner]?
+    
+    override func mapping(map: Map) {
+        banner <- map["banner"]
+    }
+}

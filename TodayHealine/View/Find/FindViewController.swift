@@ -16,10 +16,11 @@ private let segmenTitleViewY: CGFloat = UIScreen.height  - segmenTitleViewHeight
 class FindViewController: BaseViewController {
     fileprivate lazy var finVM: FindViewModel =  FindViewModel()
     
-    fileprivate lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: CGRect(x: 0.0, y: 64.0, width: UIScreen.width, height: UIScreen.height), style: UITableViewStyle.plain)
+    fileprivate lazy var tableView: UITableView = {[unowned self] in
+        let tableView = UITableView(frame: CGRect(x: 0.0, y: 0, width: UIScreen.width, height: UIScreen.height), style: UITableViewStyle.plain)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.tableHeaderView = self.bannerView
         return tableView
     }()
 
@@ -30,31 +31,10 @@ class FindViewController: BaseViewController {
         return bannerView
     }()
 
-    fileprivate lazy var contentView: UIView = {
-        let contentView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: UITabBar.height))
-            contentView.backgroundColor = UIColor.random()
-        return contentView
-    }()
-
-    fileprivate lazy var segmentContentView: PageContentView = {[unowned self] in
-        var childVCs = [UITableViewController]()
-        let latestVC = LatestViewController()
-        let hotVC = HotViewController()
-        let followVC = FollowViewController()
-        childVCs.append(latestVC)
-        childVCs.append(hotVC)
-        childVCs.append(followVC)
-        childVCs.forEach({ (vcc) in
-            vcc.tableView.contentInset = UIEdgeInsets(top: contentTopInset, left: 0, bottom: 0, right: 0)
-        })
-        let contentView = PageContentView(frame: CGRect(x: 0, y: 0, width: UIScreen.width, height: UIScreen.height), childVCs: childVCs, parentVC: self)
-        contentView.backgroundColor = UIColor.random()
-        return contentView
-    }()
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        loadData()
     }
 }
 
@@ -97,14 +77,12 @@ extension FindViewController {
     }
     
     fileprivate func loadData() {
-        finVM.loadBanner {
-            
+        finVM.loadBanner { [unowned self] in
+            self.bannerView.banners = self.finVM.banners
         }
     }
 }
 
 extension FindViewController {
-    override func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
-        navigationController.setNavigationBarHidden(false, animated: false)
-    }
+    
 }

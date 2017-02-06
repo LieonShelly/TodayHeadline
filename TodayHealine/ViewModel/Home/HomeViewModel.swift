@@ -28,10 +28,3 @@ extension HomeViewModel {
         }
     }
 }
-
-fileprivate class BannerGroup: Model {
-    var banner: [Banner]?
-    fileprivate  override func mapping(map: Map) {
-        banner <- map["banner"]
-    }
-}

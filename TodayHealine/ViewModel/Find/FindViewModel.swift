@@ -8,17 +8,24 @@
 
 import UIKit
 import PromiseKit
+import ObjectMapper
 
 class FindViewModel {
+   lazy var banners: [Banner] = [Banner]()
+   lazy var activities: [Activity] = [Activity]()
+   lazy var subjecList: [SubjectModel] = [SubjectModel]()
     
 }
 
 extension FindViewModel {
     func loadBanner(finished: @escaping () -> Void) {
         let param = FindRequstParam()
-        let req: Promise<Banner> = RequstManager.requst(Router.endpointWithoutToken(param: param, endPoint: FindRequestPath.banner))
-        req.then { _ -> Void in
-            
+        let req: Promise<FindActiviy> = RequstManager.requst(Router.endpointWithoutToken(param: param, endPoint: FindRequestPath.bannerAndActivity))
+        req.then {[unowned self] data    -> Void in
+            self.banners = data.banners ?? [Banner]()
+            self.activities = data.activities ?? [Activity]()
+            self.subjecList = data.subjecList ?? [SubjectModel]()
+            finished()
         }.catch { error in
             print(error)
         }
@@ -44,5 +51,17 @@ extension FindViewModel {
         } else {
             return 0.0
         }
+    }
+}
+
+fileprivate class FindActiviy: Model {
+    var banners: [Banner]?
+    var activities: [Activity]?
+    var subjecList: [SubjectModel]?
+    
+    fileprivate override func mapping(map: Map) {
+        banners <- map["banner"]
+        activities <- map["activity_list"]
+        subjecList <- map["subject_list"]
     }
 }

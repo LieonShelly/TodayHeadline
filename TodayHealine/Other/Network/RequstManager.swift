@@ -17,6 +17,7 @@ class RequstManager: NSObject {
             Alamofire.request(router.URLString, method: .post, parameters: router.param?.toJSON()).responseJSON { response in
                 switch response.result {
                     case .success(let value):
+//                        print(value)
                         guard let json = value as? [String: Any], let dataJson = json["data"] as? [String: Any] else { return }
                         guard let obj = Mapper<T>().map(JSON: dataJson) else { return }
                        

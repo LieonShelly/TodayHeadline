@@ -55,6 +55,7 @@ extension SegmentView {
     fileprivate func setupUI() {
         var i: Int = 0
         addSubview(scrollView)
+        backgroundColor = UIColor.white
         self.titles.forEach { title in
             let button = UIButton()
             button.setTitleColor(UIColor.darkGray, for: .normal)
@@ -86,14 +87,14 @@ extension SegmentView {
         selectedButton.isSelected = false
         button.isSelected = true
         selectedButton = button
-        scrollline.bounds.size.width = titleWidths[selectedButton.tag]
         if selectedButton.center.x > bounds.width * 0.5  && buttons.count > segCountPerPage {
             scrollView.setContentOffset(CGPoint(x: selectedButton.frame.maxX - bounds.width * 0.5 - selectedButton.bounds.width * 0.5, y: 0), animated: false)
         } else {
            scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: false)
         }
-        UIView.animate(withDuration: 0.25) { 
+        UIView.animate(withDuration: 0.25, animations: { 
             self.scrollline.center.x = self.selectedButton.center.x
-        }
+            self.scrollline.bounds.size.width = self.titleWidths[self.selectedButton.tag]
+        }) 
     }
 }

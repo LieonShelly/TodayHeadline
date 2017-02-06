@@ -47,12 +47,12 @@ enum HomeRequestPath: EndPointProtocol {
 }
 
 enum FindRequestPath: EndPointProtocol {
-    case banner
+    case bannerAndActivity
     case listActivity
 
     var path: String {
         switch self {
-        case .banner:
+        case .bannerAndActivity:
             return "post/index/"
         case .listActivity:
             return "post/index/"
@@ -61,7 +61,7 @@ enum FindRequestPath: EndPointProtocol {
     
     var endPoint: String {
         switch self {
-        case .banner:
+        case .bannerAndActivity:
             return "index"
         case .listActivity:
             return "listByNew"
