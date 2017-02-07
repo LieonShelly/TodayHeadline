@@ -41,6 +41,7 @@
 		CD6DE2BE1E45ABF7007F91F5 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6DE2BD1E45ABF7007F91F5 /* BaseTableViewController.swift */; };
 		CD6DE2C01E45B495007F91F5 /* LabelAndBottomTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6DE2BF1E45B495007F91F5 /* LabelAndBottomTableViewHeaderView.swift */; };
 		CD6DE2C21E45B4A9007F91F5 /* LabelAndBottomTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6DE2C11E45B4A9007F91F5 /* LabelAndBottomTableViewHeaderView.xib */; };
+		CD86F6E41E496A4C0027D917 /* apple-app-site-association in Resources */ = {isa = PBXBuildFile; fileRef = CD86F6E31E496A4C0027D917 /* apple-app-site-association */; };
 		CDB3ADB51E2C9FF50028E90C /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB3ADA31E2C9FF50028E90C /* Follow.storyboard */; };
 		CDB3ADB71E2C9FF50028E90C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB3ADA61E2C9FF50028E90C /* Home.storyboard */; };
 		CDB3ADB91E2C9FF50028E90C /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB3ADAA1E2C9FF50028E90C /* Me.storyboard */; };
@@ -74,10 +75,10 @@
 		CD002CFE1E399CB60036DA44 /* FindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		CD3A546C1E39CAFA0045C537 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		CD3A546E1E39CB2E0045C537 /* FindViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindViewModel.swift; sourceTree = "<group>"; };
-		CD4090101E3847FC0045DD9E /* CycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleView.swift; sourceTree = "<group>"; };
-		CD4090121E38480A0045DD9E /* CycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CycleView.xib; sourceTree = "<group>"; };
-		CD4090141E384A740045DD9E /* CycleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleCollectionViewCell.swift; sourceTree = "<group>"; };
-		CD4090151E384A740045DD9E /* CycleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CycleCollectionViewCell.xib; sourceTree = "<group>"; };
+		CD4090101E3847FC0045DD9E /* CycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CycleView.swift; path = ../Home/CycleView.swift; sourceTree = "<group>"; };
+		CD4090121E38480A0045DD9E /* CycleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CycleView.xib; path = ../Home/CycleView.xib; sourceTree = "<group>"; };
+		CD4090141E384A740045DD9E /* CycleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CycleCollectionViewCell.swift; path = ../Home/CycleCollectionViewCell.swift; sourceTree = "<group>"; };
+		CD4090151E384A740045DD9E /* CycleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CycleCollectionViewCell.xib; path = ../Home/CycleCollectionViewCell.xib; sourceTree = "<group>"; };
 		CD4090181E386F010045DD9E /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		CD40901A1E38703B0045DD9E /* RecomandViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecomandViewModel.swift; sourceTree = "<group>"; };
 		CD4BFC4D1E38E7BD00EF4DF2 /* HomeRecommendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRecommendModel.swift; sourceTree = "<group>"; };
@@ -105,6 +106,8 @@
 		CD6DE2BD1E45ABF7007F91F5 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		CD6DE2BF1E45B495007F91F5 /* LabelAndBottomTableViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelAndBottomTableViewHeaderView.swift; sourceTree = "<group>"; };
 		CD6DE2C11E45B4A9007F91F5 /* LabelAndBottomTableViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelAndBottomTableViewHeaderView.xib; sourceTree = "<group>"; };
+		CD86F6E21E4969EA0027D917 /* TodayHealine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayHealine.entitlements; sourceTree = "<group>"; };
+		CD86F6E31E496A4C0027D917 /* apple-app-site-association */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "apple-app-site-association"; sourceTree = "<group>"; };
 		CDB3ADA31E2C9FF50028E90C /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
 		CDB3ADA61E2C9FF50028E90C /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		CDB3ADAA1E2C9FF50028E90C /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
@@ -208,6 +211,7 @@
 		CD6249761E2C6A9E00E22002 /* TodayHealine */ = {
 			isa = PBXGroup;
 			children = (
+				CD86F6E21E4969EA0027D917 /* TodayHealine.entitlements */,
 				CD6249771E2C6A9E00E22002 /* AppDelegate.swift */,
 				CDB3AD981E2C9FF50028E90C /* Model */,
 				CDB3ADA11E2C9FF50028E90C /* View */,
@@ -220,6 +224,7 @@
 				CD62498B1E2C6BC300E22002 /* Cartfile */,
 				CD6249801E2C6A9E00E22002 /* LaunchScreen.storyboard */,
 				CD6249831E2C6A9E00E22002 /* Info.plist */,
+				CD86F6E31E496A4C0027D917 /* apple-app-site-association */,
 			);
 			path = TodayHealine;
 			sourceTree = "<group>";
@@ -335,10 +340,6 @@
 				CDB3ADA61E2C9FF50028E90C /* Home.storyboard */,
 				CDB3ADC11E2CA1390028E90C /* HomeViewController.swift */,
 				CDB3ADD11E2CBBDD0028E90C /* RecommendViewController.swift */,
-				CD4090101E3847FC0045DD9E /* CycleView.swift */,
-				CD4090121E38480A0045DD9E /* CycleView.xib */,
-				CD4090141E384A740045DD9E /* CycleCollectionViewCell.swift */,
-				CD4090151E384A740045DD9E /* CycleCollectionViewCell.xib */,
 				CDEB19951E389569005F1D84 /* HomeNaviBar.swift */,
 				CDEB19971E389576005F1D84 /* HomeNaviBar.xib */,
 			);
@@ -356,6 +357,10 @@
 				CD6DE2BD1E45ABF7007F91F5 /* BaseTableViewController.swift */,
 				CD6DE2BF1E45B495007F91F5 /* LabelAndBottomTableViewHeaderView.swift */,
 				CD6DE2C11E45B4A9007F91F5 /* LabelAndBottomTableViewHeaderView.xib */,
+				CD4090101E3847FC0045DD9E /* CycleView.swift */,
+				CD4090121E38480A0045DD9E /* CycleView.xib */,
+				CD4090141E384A740045DD9E /* CycleCollectionViewCell.swift */,
+				CD4090151E384A740045DD9E /* CycleCollectionViewCell.xib */,
 				CDF9C5F41E482A0900AF3060 /* SegmentView.swift */,
 			);
 			path = Main;
@@ -463,7 +468,13 @@
 				TargetAttributes = {
 					CD6249731E2C6A9E00E22002 = {
 						CreatedOnToolsVersion = 8.2;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 34WAS59P9G;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -497,6 +508,7 @@
 				CD6249821E2C6A9E00E22002 /* LaunchScreen.storyboard in Resources */,
 				CD6DE2C21E45B4A9007F91F5 /* LabelAndBottomTableViewHeaderView.xib in Resources */,
 				CD62497F1E2C6A9E00E22002 /* Assets.xcassets in Resources */,
+				CD86F6E41E496A4C0027D917 /* apple-app-site-association in Resources */,
 				CD62498C1E2C6BC300E22002 /* Cartfile in Resources */,
 				CD4090131E38480A0045DD9E /* CycleView.xib in Resources */,
 				CD62497D1E2C6A9E00E22002 /* Main.storyboard in Resources */,
@@ -771,6 +783,9 @@
 			baseConfigurationReference = F198029347078D1222D49A81 /* Pods-TodayHealine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TodayHealine/TodayHealine.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 仁军 李 (N3Y96X5CX3)";
+				DEVELOPMENT_TEAM = 34WAS59P9G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -778,8 +793,10 @@
 				INFOPLIST_FILE = TodayHealine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cn.msh.-refresh.ios.TodayHealine";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.msh.democode.ios.democode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4b1e76ec-0766-4e5f-8505-13134dbc141f";
+				PROVISIONING_PROFILE_SPECIFIER = lieon_democode_provisioning_profile;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -789,6 +806,9 @@
 			baseConfigurationReference = 506E541DCD7479D122137269 /* Pods-TodayHealine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TodayHealine/TodayHealine.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: 仁军 李 (N3Y96X5CX3)";
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -796,7 +816,7 @@
 				INFOPLIST_FILE = TodayHealine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "cn.msh.-refresh.ios.TodayHealine";
+				PRODUCT_BUNDLE_IDENTIFIER = cn.msh.democode.ios.democode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
