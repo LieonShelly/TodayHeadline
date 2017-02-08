@@ -22,8 +22,18 @@ extension UITableView {
     }
 }
 
+extension UICollectionView {
+    func dequeueReuseableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T where T:ViewNameReusable {
+        guard let cell = dequeueReusableCell(withReuseIdentifier: T.reuseIndentifier, for: indexPath) as? T else {
+            fatalError("Could not dequeue cell with identifier: \(T.reuseIndentifier)")
+        }
+        return cell
+    }
+    
+}
+
 extension UITabBar {
-    static let height: CGFloat = 44
+    static let height: CGFloat = 49
 }
 
 extension UIScreen {

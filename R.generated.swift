@@ -21,12 +21,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 2 files.
+  /// This `R.file` struct is generated, and contains static references to 3 files.
   struct file {
     /// Resource file `.swiftlint.yml`.
     static let swiftlintYml = Rswift.FileResource(bundle: R.hostingBundle, name: ".swiftlint", pathExtension: "yml")
     /// Resource file `Cartfile`.
     static let cartfile = Rswift.FileResource(bundle: R.hostingBundle, name: "Cartfile", pathExtension: "")
+    /// Resource file `apple-app-site-association`.
+    static let appleAppSiteAssociation = Rswift.FileResource(bundle: R.hostingBundle, name: "apple-app-site-association", pathExtension: "")
     
     /// `bundle.url(forResource: ".swiftlint", withExtension: "yml")`
     static func swiftlintYml(_: Void = ()) -> Foundation.URL? {
@@ -37,6 +39,12 @@ struct R: Rswift.Validatable {
     /// `bundle.url(forResource: "Cartfile", withExtension: "")`
     static func cartfile(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.cartfile
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "apple-app-site-association", withExtension: "")`
+    static func appleAppSiteAssociation(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.appleAppSiteAssociation
       return fileResource.bundle.url(forResource: fileResource)
     }
     
@@ -124,7 +132,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 5 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 10 nibs.
   struct nib {
     /// Nib `CycleCollectionViewCell`.
     static let cycleCollectionViewCell = _R.nib._CycleCollectionViewCell()
@@ -132,8 +140,18 @@ struct R: Rswift.Validatable {
     static let cycleView = _R.nib._CycleView()
     /// Nib `HomeNaviBar`.
     static let homeNaviBar = _R.nib._HomeNaviBar()
+    /// Nib `HotCollectionViewCell`.
+    static let hotCollectionViewCell = _R.nib._HotCollectionViewCell()
+    /// Nib `HotTableViewCell`.
+    static let hotTableViewCell = _R.nib._HotTableViewCell()
     /// Nib `LabelAndBottomTableViewHeaderView`.
     static let labelAndBottomTableViewHeaderView = _R.nib._LabelAndBottomTableViewHeaderView()
+    /// Nib `RecHotTableViewCell`.
+    static let recHotTableViewCell = _R.nib._RecHotTableViewCell()
+    /// Nib `RecTableViewCell`.
+    static let recTableViewCell = _R.nib._RecTableViewCell()
+    /// Nib `RecomendCollectionViewCell`.
+    static let recomendCollectionViewCell = _R.nib._RecomendCollectionViewCell()
     /// Nib `RecommandTableViewCell`.
     static let recommandTableViewCell = _R.nib._RecommandTableViewCell()
     
@@ -152,9 +170,34 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.homeNaviBar)
     }
     
+    /// `UINib(name: "HotCollectionViewCell", in: bundle)`
+    static func hotCollectionViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.hotCollectionViewCell)
+    }
+    
+    /// `UINib(name: "HotTableViewCell", in: bundle)`
+    static func hotTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.hotTableViewCell)
+    }
+    
     /// `UINib(name: "LabelAndBottomTableViewHeaderView", in: bundle)`
     static func labelAndBottomTableViewHeaderView(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.labelAndBottomTableViewHeaderView)
+    }
+    
+    /// `UINib(name: "RecHotTableViewCell", in: bundle)`
+    static func recHotTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.recHotTableViewCell)
+    }
+    
+    /// `UINib(name: "RecTableViewCell", in: bundle)`
+    static func recTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.recTableViewCell)
+    }
+    
+    /// `UINib(name: "RecomendCollectionViewCell", in: bundle)`
+    static func recomendCollectionViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.recomendCollectionViewCell)
     }
     
     /// `UINib(name: "RecommandTableViewCell", in: bundle)`
@@ -165,8 +208,18 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 6 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `HotCollectionViewCell`.
+    static let hotCollectionViewCell: Rswift.ReuseIdentifier<HotCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "HotCollectionViewCell")
+    /// Reuse identifier `HotTableViewCell`.
+    static let hotTableViewCell: Rswift.ReuseIdentifier<HotTableViewCell> = Rswift.ReuseIdentifier(identifier: "HotTableViewCell")
+    /// Reuse identifier `RecHotTableViewCell`.
+    static let recHotTableViewCell: Rswift.ReuseIdentifier<RecHotTableViewCell> = Rswift.ReuseIdentifier(identifier: "RecHotTableViewCell")
+    /// Reuse identifier `RecTableViewCell`.
+    static let recTableViewCell: Rswift.ReuseIdentifier<RecTableViewCell> = Rswift.ReuseIdentifier(identifier: "RecTableViewCell")
+    /// Reuse identifier `RecomendCollectionViewCell`.
+    static let recomendCollectionViewCell: Rswift.ReuseIdentifier<RecomendCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "RecomendCollectionViewCell")
     /// Reuse identifier `RecommandTableViewCell`.
     static let recommandTableViewCell: Rswift.ReuseIdentifier<RecommandTableViewCell> = Rswift.ReuseIdentifier(identifier: "RecommandTableViewCell")
     
@@ -292,12 +345,82 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
+    struct _HotCollectionViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = HotCollectionViewCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "HotCollectionViewCell"
+      let name = "HotCollectionViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> HotCollectionViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HotCollectionViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _HotTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = HotTableViewCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "HotTableViewCell"
+      let name = "HotTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> HotTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HotTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
     struct _LabelAndBottomTableViewHeaderView: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "LabelAndBottomTableViewHeaderView"
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> LabelAndBottomTableViewHeaderView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? LabelAndBottomTableViewHeaderView
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _RecHotTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = RecHotTableViewCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "RecHotTableViewCell"
+      let name = "RecHotTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> RecHotTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RecHotTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _RecTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = RecTableViewCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "RecTableViewCell"
+      let name = "RecTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> RecTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RecTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _RecomendCollectionViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = RecomendCollectionViewCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "RecomendCollectionViewCell"
+      let name = "RecomendCollectionViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> RecomendCollectionViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RecomendCollectionViewCell
       }
       
       fileprivate init() {}

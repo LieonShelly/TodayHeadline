@@ -9,13 +9,8 @@
 import UIKit
 import PromiseKit
 
-private let bannerHeight: CGFloat = 200
-private let segmenTitleViewHeight: CGFloat = 44
-private let contentTopInset: CGFloat = UIScreen.height  - UITabBar.height
-private let segmenTitleViewY: CGFloat = UIScreen.height  - segmenTitleViewHeight - UITabBar.height
 class FindViewController: BaseViewController {
     fileprivate lazy var finVM: FindViewModel =  FindViewModel()
-    
     fileprivate lazy var tableView: UITableView = {[unowned self] in
         let tableView = UITableView(frame: CGRect(x: 0.0, y: 0, width: UIScreen.width, height: UIScreen.height), style: UITableViewStyle.plain)
         tableView.dataSource = self
@@ -27,7 +22,7 @@ class FindViewController: BaseViewController {
     fileprivate lazy var bannerView: CycleView = {
         let bannerView = CycleView.cycleView()
         bannerView.backgroundColor = UIColor.yellow
-        bannerView.frame = CGRect(x: 0, y: 0, width: Int(UIScreen.width), height: Int(bannerHeight))
+        bannerView.frame = CGRect(x: 0, y: 0, width: Int(UIScreen.width), height: Int(self.finVM.bannerHeight))
         return bannerView
     }()
 
@@ -48,13 +43,23 @@ extension FindViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.contentView.backgroundColor = UIColor.random()
+        switch indexPath.section {
+        case 0:
+            let cell: RecHotTableViewCell = tableView.dequeueReuseableCell(for: indexPath)
+            cell.finVM = finVM
+            return cell
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            cell.contentView.backgroundColor = UIColor.random()
+            return cell
+        default:
+            break
+        }
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let titleView = SegmentView(frame: CGRect(x: 0, y: 0, width: Int(UIScreen.width), height: Int(segmenTitleViewHeight)), titles: ["最新", "热门", "关注"])
+        let titleView = SegmentView(frame: CGRect(x: 0, y: 0, width: Int(UIScreen.width), height: Int(finVM.segmenTitleViewHeight)), titles: ["最新", "热门", "关注"])
         return titleView
     }
     
@@ -74,6 +79,7 @@ extension FindViewController {
     fileprivate func setupUI() {
         view.addSubview(tableView)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(R.nib.recHotTableViewCell)
     }
     
     fileprivate func loadData() {

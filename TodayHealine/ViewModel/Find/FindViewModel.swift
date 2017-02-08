@@ -10,11 +10,26 @@ import UIKit
 import PromiseKit
 import ObjectMapper
 
+private let segTitleViewHeight: CGFloat = 40
+private let contentTopInst: CGFloat = UIScreen.height  - UITabBar.height
+private let segTitleViewY: CGFloat = UIScreen.height  - segTitleViewHeight - UITabBar.height
+private let banheight: CGFloat = 200
+private let recommandAndHotSectionHeight: CGFloat = UIScreen.height - banheight - UITabBar.height - segTitleViewHeight
+private let recommendSectionHeigh: CGFloat = 100
+private let hotSectionHeigh: CGFloat = recommandAndHotSectionHeight - recommendSectionHeigh
+private let sectionHeaderHeigh: CGFloat = segTitleViewHeight
+
 class FindViewModel {
    lazy var banners: [Banner] = [Banner]()
    lazy var activities: [Activity] = [Activity]()
    lazy var subjecList: [SubjectModel] = [SubjectModel]()
-    
+   let bannerHeight: CGFloat = banheight
+   let segmenTitleViewHeight: CGFloat = segTitleViewHeight
+   let contentTopInset: CGFloat = contentTopInst
+   let segmenTitleViewY: CGFloat = segTitleViewY
+   let hotSectionHeight: CGFloat = hotSectionHeigh
+   let recommendSectionHeight: CGFloat = recommendSectionHeigh
+   let sectionHeaderHeight: CGFloat = sectionHeaderHeigh
 }
 
 extension FindViewModel {
@@ -38,16 +53,19 @@ extension FindViewModel {
     }
     
     func numberOfRows(in section: Int) -> Int {
-        return section == 1 ? 40: 4
+        return section == 1 ? 40: 1
     }
     
     func heightForRow(at indexPath: IndexPath) -> CGFloat {
+        if indexPath.section == 0 {
+            return recommandAndHotSectionHeight
+        }
         return 80.0
     }
     
     func heightForHeader(in section: Int) -> CGFloat {
         if section == 1 {
-            return 40.0
+            return sectionHeaderHeight
         } else {
             return 0.0
         }
