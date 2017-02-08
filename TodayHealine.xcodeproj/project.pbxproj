@@ -34,6 +34,7 @@
 		CD60B2DC1E4AE4E100B11E3B /* HotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60B2DA1E4AE4E100B11E3B /* HotTableViewCell.swift */; };
 		CD60B2DD1E4AE4E100B11E3B /* HotTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD60B2DB1E4AE4E100B11E3B /* HotTableViewCell.xib */; };
 		CD60B2DF1E4AE5BF00B11E3B /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60B2DE1E4AE5BF00B11E3B /* BaseTableViewCell.swift */; };
+		CD60B2E11E4AEE6E00B11E3B /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD60B2E01E4AEE6E00B11E3B /* BaseCollectionViewCell.swift */; };
 		CD6249781E2C6A9E00E22002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6249771E2C6A9E00E22002 /* AppDelegate.swift */; };
 		CD62497D1E2C6A9E00E22002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD62497B1E2C6A9E00E22002 /* Main.storyboard */; };
 		CD62497F1E2C6A9E00E22002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD62497E1E2C6A9E00E22002 /* Assets.xcassets */; };
@@ -105,6 +106,7 @@
 		CD60B2DA1E4AE4E100B11E3B /* HotTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotTableViewCell.swift; sourceTree = "<group>"; };
 		CD60B2DB1E4AE4E100B11E3B /* HotTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HotTableViewCell.xib; sourceTree = "<group>"; };
 		CD60B2DE1E4AE5BF00B11E3B /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		CD60B2E01E4AEE6E00B11E3B /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		CD6249741E2C6A9E00E22002 /* TodayHealine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodayHealine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6249771E2C6A9E00E22002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD62497C1E2C6A9E00E22002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				CD4090151E384A740045DD9E /* CycleCollectionViewCell.xib */,
 				CDF9C5F41E482A0900AF3060 /* SegmentView.swift */,
 				CD60B2DE1E4AE5BF00B11E3B /* BaseTableViewCell.swift */,
+				CD60B2E01E4AEE6E00B11E3B /* BaseCollectionViewCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -688,6 +691,7 @@
 				CD6DE2C01E45B495007F91F5 /* LabelAndBottomTableViewHeaderView.swift in Sources */,
 				CD3A546D1E39CAFA0045C537 /* Network.swift in Sources */,
 				CD4090111E3847FC0045DD9E /* CycleView.swift in Sources */,
+				CD60B2E11E4AEE6E00B11E3B /* BaseCollectionViewCell.swift in Sources */,
 				CD3A546F1E39CB2E0045C537 /* FindViewModel.swift in Sources */,
 				CDB3ADC01E2CA1240028E90C /* MainNavigationController.swift in Sources */,
 				CDB3ADBE1E2CA1060028E90C /* MainTabBarController.swift in Sources */,

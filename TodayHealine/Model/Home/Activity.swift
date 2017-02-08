@@ -18,13 +18,13 @@ class ActivityGroup: Model {
 }
 
 class Activity: Model {
-    var icon: String?
+    var icon: URL?
     var id: String?
     var title: String?
     var userCount: Int = 0
     
     override func mapping(map: Map) {
-        icon <- map["icon"]
+        icon <- (map["icon"], URLTransform())
         id <- map["id"]
         title <- map["title"]
         userCount <- (map["users"], IntStringTransform())

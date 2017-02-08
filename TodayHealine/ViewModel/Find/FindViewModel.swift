@@ -10,12 +10,12 @@ import UIKit
 import PromiseKit
 import ObjectMapper
 
-private let segTitleViewHeight: CGFloat = 40
+private let segTitleViewHeight: CGFloat = 35
 private let contentTopInst: CGFloat = UIScreen.height  - UITabBar.height
 private let segTitleViewY: CGFloat = UIScreen.height  - segTitleViewHeight - UITabBar.height
 private let banheight: CGFloat = 200
 private let recommandAndHotSectionHeight: CGFloat = UIScreen.height - banheight - UITabBar.height - segTitleViewHeight
-private let recommendSectionHeigh: CGFloat = 100
+private let recommendSectionHeigh: CGFloat = 120
 private let hotSectionHeigh: CGFloat = recommandAndHotSectionHeight - recommendSectionHeigh
 private let sectionHeaderHeigh: CGFloat = segTitleViewHeight
 
@@ -33,7 +33,7 @@ class FindViewModel {
 }
 
 extension FindViewModel {
-    func loadBanner(finished: @escaping () -> Void) {
+    func load(finished: @escaping () -> Void) {
         let param = FindRequstParam()
         let req: Promise<FindActiviy> = RequstManager.requst(Router.endpointWithoutToken(param: param, endPoint: FindRequestPath.bannerAndActivity))
         req.then {[unowned self] data    -> Void in

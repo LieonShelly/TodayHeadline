@@ -8,13 +8,10 @@
 
 import UIKit
 
-class RecomendCollectionViewCell: UICollectionViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
+class RecomendCollectionViewCell: BaseCollectionViewCell {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
 }
 
-extension RecomendCollectionViewCell: ViewNameReusable {}
+extension RecomendCollectionViewCell: OneImageOneLabelProtocol, View {}

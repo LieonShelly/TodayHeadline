@@ -83,8 +83,9 @@ extension FindViewController {
     }
     
     fileprivate func loadData() {
-        finVM.loadBanner { [unowned self] in
+        finVM.load { [unowned self] in
             self.bannerView.banners = self.finVM.banners
+            self.tableView.reloadData()
         }
     }
 }

@@ -16,7 +16,7 @@ extension UITableView {
         return cell
     }
     
-    func dequeueReuseableHeaderFooter<T: UITableViewHeaderFooterView>(for indexPath: IndexPath) -> T where T: ViewNameReusable {
+    func dequeueReuseableHeaderFooter<T: UITableViewHeaderFooterView>(for section: Int) -> T where T: ViewNameReusable {
          guard let cell = dequeueReusableHeaderFooterView(withIdentifier: T.reuseIndentifier) as? T else { fatalError("Could not dequeue HeaderFooterView with identifier: \(T.reuseIndentifier)")  }
         return cell
     }

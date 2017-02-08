@@ -15,27 +15,31 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTV-hi-SLf">
-                    <rect key="frame" x="20" y="9" width="36" height="17"/>
+                    <rect key="frame" x="10" y="9" width="36" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.078431372549019607" green="0.078431372549019607" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O8N-DI-Qev">
-                    <rect key="frame" x="355" y="4" width="41" height="28"/>
+                    <rect key="frame" x="352" y="4" width="54" height="28"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Button">
+                    <state key="normal" title="查看全部">
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
             </subviews>
             <constraints>
-                <constraint firstItem="oTV-hi-SLf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="0iw-Zc-kIR"/>
-                <constraint firstAttribute="trailing" secondItem="O8N-DI-Qev" secondAttribute="trailing" constant="20" id="GIS-dd-8SC"/>
+                <constraint firstItem="oTV-hi-SLf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="0iw-Zc-kIR"/>
+                <constraint firstAttribute="trailing" secondItem="O8N-DI-Qev" secondAttribute="trailing" constant="10" id="GIS-dd-8SC"/>
                 <constraint firstItem="O8N-DI-Qev" firstAttribute="centerY" secondItem="oTV-hi-SLf" secondAttribute="centerY" id="IlK-qU-cej"/>
                 <constraint firstItem="oTV-hi-SLf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dRn-In-ril"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="tagButton" destination="O8N-DI-Qev" id="0nR-f3-BBt"/>
+                <outlet property="tagLabel" destination="oTV-hi-SLf" id="5SZ-LG-8q7"/>
+            </connections>
             <point key="canvasLocation" x="56" y="-262.5"/>
         </view>
     </objects>

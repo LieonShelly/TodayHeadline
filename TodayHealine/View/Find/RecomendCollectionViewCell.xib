@@ -20,7 +20,7 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4dS-6x-cav">
                         <rect key="frame" x="0.0" y="0.0" width="149" height="100.5"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ov8-gq-luz">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ov8-gq-luz">
                         <rect key="frame" x="0.0" y="105.5" width="149" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,6 +38,10 @@
                 <constraint firstItem="4dS-6x-cav" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="p32-gD-H5R"/>
             </constraints>
             <size key="customSize" width="149" height="120"/>
+            <connections>
+                <outlet property="imageView" destination="4dS-6x-cav" id="XJM-Qs-lOw"/>
+                <outlet property="titleLabel" destination="ov8-gq-luz" id="ZMP-YI-D7f"/>
+            </connections>
             <point key="canvasLocation" x="83.5" y="89"/>
         </collectionViewCell>
     </objects>

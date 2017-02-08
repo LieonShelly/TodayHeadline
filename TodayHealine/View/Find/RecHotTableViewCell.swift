@@ -9,7 +9,11 @@
 import UIKit
 
 class RecHotTableViewCell: UITableViewCell {
-    internal var finVM: FindViewModel?
+    internal var finVM: FindViewModel? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     @IBOutlet weak var tableView: UITableView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,6 +22,7 @@ class RecHotTableViewCell: UITableViewCell {
         tableView.delegate = self
         tableView.register(R.nib.recTableViewCell)
         tableView.register(R.nib.hotTableViewCell)
+        tableView.register(R.nib.labelAndBottomTableViewHeaderView(), forHeaderFooterViewReuseIdentifier: R.nib.labelAndBottomTableViewHeaderView.name)
     }
 }
 
@@ -34,6 +39,7 @@ extension RecHotTableViewCell: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let cell: RecTableViewCell = tableView.dequeueReuseableCell(for: indexPath)
+            cell.getModel(data: finVM?.subjecList)
             return cell
         case 1:
             let cell: HotTableViewCell = tableView.dequeueReuseableCell(for: indexPath)
@@ -55,6 +61,24 @@ extension RecHotTableViewCell: UITableViewDelegate {
         default:
             return 0
         }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView: LabelAndBottomTableViewHeaderView = tableView.dequeueReuseableHeaderFooter(for: section)
+        switch section {
+        case 0:
+            headerView.tagLabel.text = "推荐小组"
+        case 1:
+            headerView.tagLabel.text = "热门活动"
+        default:
+            break
+        }
+        return headerView
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return finVM?.segmenTitleViewHeight ?? 0
     }
 }
 

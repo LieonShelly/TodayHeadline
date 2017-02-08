@@ -8,6 +8,16 @@
 
 import UIKit
 import Kingfisher
+import ObjectMapper
+
+protocol OneImageOneLabelProtocol {
+    weak var titleLabel: UILabel! {get set}
+    weak var imageView: UIImageView! {get set}
+}
+
+protocol OneCollectionViewProtocol {
+    var models: [Mappable]? {get set}
+}
 
 protocol ViewNameReusable: class { }
 
@@ -75,5 +85,20 @@ extension View where Self: RecommandTableViewCell {
         firstButton.setTitle(model.user?.nickname, for: .normal)
         secondButton.setTitle(model.views, for: .normal)
         thirdButton.setTitle(model.praises, for: .normal)
+    }
+}
+
+extension View where Self: RecTableViewCell {
+    func getModel<M>(data: M) {
+        guard let model = data as? [SubjectModel] else { return  }
+        models = model
+    }
+}
+
+extension View where Self: OneImageOneLabelProtocol {
+    func getModel<M>(data: M) {
+        guard let model = data as? SubjectModel else { return  }
+        imageView.kf.setImage(with: model.photo)
+        titleLabel.text = model.title
     }
 }
