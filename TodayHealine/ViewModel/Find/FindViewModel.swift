@@ -15,7 +15,7 @@ private let contentTopInst: CGFloat = UIScreen.height  - UITabBar.height
 private let segTitleViewY: CGFloat = UIScreen.height  - segTitleViewHeight - UITabBar.height
 private let banheight: CGFloat = 200
 private let recommandAndHotSectionHeight: CGFloat = UIScreen.height - banheight - UITabBar.height - segTitleViewHeight
-private let recommendSectionHeigh: CGFloat = 120
+private let recommendSectionHeigh: CGFloat = 150
 private let hotSectionHeigh: CGFloat = recommandAndHotSectionHeight - recommendSectionHeigh
 private let sectionHeaderHeigh: CGFloat = segTitleViewHeight
 

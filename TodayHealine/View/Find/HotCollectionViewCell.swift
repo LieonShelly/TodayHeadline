@@ -8,12 +8,10 @@
 
 import UIKit
 
-class HotCollectionViewCell: UICollectionViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
+class HotCollectionViewCell: UICollectionViewCell, OneLabelProtocol, OneImageOneLabelProtocol, View {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var sublabel: UILabel!
 }
 
 extension HotCollectionViewCell: ViewNameReusable {}

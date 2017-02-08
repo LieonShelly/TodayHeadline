@@ -78,6 +78,7 @@ extension FindViewController: UITableViewDelegate {
 extension FindViewController {
     fileprivate func setupUI() {
         view.addSubview(tableView)
+        automaticallyAdjustsScrollViewInsets = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.register(R.nib.recHotTableViewCell)
     }

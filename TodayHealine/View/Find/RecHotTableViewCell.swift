@@ -43,6 +43,7 @@ extension RecHotTableViewCell: UITableViewDataSource {
             return cell
         case 1:
             let cell: HotTableViewCell = tableView.dequeueReuseableCell(for: indexPath)
+            cell.getModel(data: finVM?.activities)
             return cell
         default:
             break
@@ -55,9 +56,9 @@ extension RecHotTableViewCell: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0:
-            return finVM?.recommendSectionHeight ?? 0
+            return (finVM?.recommendSectionHeight ?? 0) - ((finVM?.segmenTitleViewHeight) ?? 0)
         case 1:
-            return finVM?.hotSectionHeight ?? 0
+            return tableView.bounds.height - ((finVM?.recommendSectionHeight) ?? 0) - ((finVM?.segmenTitleViewHeight) ?? 0)
         default:
             return 0
         }

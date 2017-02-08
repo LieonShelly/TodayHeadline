@@ -20,7 +20,7 @@ class RecTableViewCell: BaseTableViewCell, OneCollectionViewProtocol, View {
     override func awakeFromNib() {
         super.awakeFromNib()
          guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return  }
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 10, right: 10)
         layout.minimumInteritemSpacing = 10
         layout.minimumLineSpacing = 10
         layout.scrollDirection = .horizontal
@@ -32,7 +32,7 @@ class RecTableViewCell: BaseTableViewCell, OneCollectionViewProtocol, View {
     override func layoutSubviews() {
         super.layoutSubviews()
         guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return  }
-        layout.itemSize = CGSize(width: (collectionView.bounds.width - 10 * 4) / 3.5, height: (collectionView.bounds.height - 10 * 2))
+        layout.itemSize = CGSize(width: (collectionView.bounds.width - 10 * 4) / 3.5, height: (collectionView.bounds.height - 10))
     }
 }
 

@@ -10,6 +10,10 @@ import UIKit
 import Kingfisher
 import ObjectMapper
 
+protocol OneLabelProtocol {
+    weak var sublabel: UILabel! {get set}
+}
+
 protocol OneImageOneLabelProtocol {
     weak var titleLabel: UILabel! {get set}
     weak var imageView: UIImageView! {get set}
@@ -88,6 +92,13 @@ extension View where Self: RecommandTableViewCell {
     }
 }
 
+extension View where Self: HotTableViewCell {
+    func getModel<M>(data: M) {
+        guard let model = data as? [Activity] else { return  }
+        models = model
+    }
+}
+
 extension View where Self: RecTableViewCell {
     func getModel<M>(data: M) {
         guard let model = data as? [SubjectModel] else { return  }
@@ -100,5 +111,13 @@ extension View where Self: OneImageOneLabelProtocol {
         guard let model = data as? SubjectModel else { return  }
         imageView.kf.setImage(with: model.photo)
         titleLabel.text = model.title
+    }
+}
+extension View where Self: HotCollectionViewCell {
+    func getModel<M>(data: M) {
+        guard let model = data as? Activity else { return  }
+        imageView.kf.setImage(with: model.icon)
+        titleLabel.text = model.title
+        sublabel.text = "\(model.userCount)人参与"
     }
 }

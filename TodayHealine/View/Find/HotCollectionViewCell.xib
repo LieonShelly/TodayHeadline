@@ -38,6 +38,7 @@
                     </label>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Rit-kj-csE" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="20" id="0KA-WE-G2e"/>
                 <constraint firstItem="EaT-KU-Lx8" firstAttribute="leading" secondItem="Rit-kj-csE" secondAttribute="trailing" constant="10" id="2TU-iz-3fv"/>
@@ -47,6 +48,11 @@
                 <constraint firstItem="qgP-TK-ldp" firstAttribute="leading" secondItem="EaT-KU-Lx8" secondAttribute="leading" id="wUk-Kv-BvL"/>
             </constraints>
             <size key="customSize" width="189" height="95"/>
+            <connections>
+                <outlet property="imageView" destination="Rit-kj-csE" id="qgA-rg-zvU"/>
+                <outlet property="sublabel" destination="qgP-TK-ldp" id="UrC-Jf-BdP"/>
+                <outlet property="titleLabel" destination="EaT-KU-Lx8" id="xz2-hL-2LR"/>
+            </connections>
             <point key="canvasLocation" x="103.5" y="76.5"/>
         </collectionViewCell>
     </objects>
