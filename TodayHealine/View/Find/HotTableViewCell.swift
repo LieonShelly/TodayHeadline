@@ -10,17 +10,19 @@ import UIKit
 import ObjectMapper
 
 class HotTableViewCell: BaseTableViewCell, OneCollectionViewProtocol, View {
+
     var models: [Mappable]? {
         didSet {
             collectionView.reloadData()
         }
     }
+    var tapAction: ((Int) -> Void)? = {cell in }
+    
     @IBOutlet weak var divierLine: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        print(collectionView.bounds.height)
         collectionView.backgroundColor = divierLine.backgroundColor
         guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return  }
         layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
@@ -29,6 +31,7 @@ class HotTableViewCell: BaseTableViewCell, OneCollectionViewProtocol, View {
         layout.scrollDirection = .vertical
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(R.nib.hotCollectionViewCell)
     }
     
@@ -52,5 +55,11 @@ extension HotTableViewCell: UICollectionViewDataSource {
         let cell: HotCollectionViewCell = collectionView.dequeueReuseableCell(for: indexPath)
         cell.getModel(data: models?[indexPath.item])
         return cell
+    }
+}
+
+extension HotTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        tapAction?(indexPath.item)
     }
 }

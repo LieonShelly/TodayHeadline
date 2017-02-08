@@ -21,6 +21,7 @@ protocol OneImageOneLabelProtocol {
 
 protocol OneCollectionViewProtocol {
     var models: [Mappable]? {get set}
+    var tapAction:((_ tapIndex: Int) -> Void)? {get set}
 }
 
 protocol ViewNameReusable: class { }

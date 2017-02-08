@@ -40,10 +40,18 @@ extension RecHotTableViewCell: UITableViewDataSource {
         case 0:
             let cell: RecTableViewCell = tableView.dequeueReuseableCell(for: indexPath)
             cell.getModel(data: finVM?.subjecList)
+            cell.tapAction = { tapIndex in
+                print(tapIndex)
+                
+            }
             return cell
         case 1:
             let cell: HotTableViewCell = tableView.dequeueReuseableCell(for: indexPath)
             cell.getModel(data: finVM?.activities)
+            cell.tapAction = { tapIndex in
+                print(tapIndex)
+                
+            }
             return cell
         default:
             break

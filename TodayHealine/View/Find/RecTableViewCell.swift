@@ -15,6 +15,7 @@ class RecTableViewCell: BaseTableViewCell, OneCollectionViewProtocol, View {
             collectionView.reloadData()
         }
     }
+    var tapAction: ((Int) -> Void)? = {cell in}
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func awakeFromNib() {
@@ -26,6 +27,7 @@ class RecTableViewCell: BaseTableViewCell, OneCollectionViewProtocol, View {
         layout.scrollDirection = .horizontal
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(R.nib.recomendCollectionViewCell)
     }
     
@@ -49,5 +51,11 @@ extension RecTableViewCell: UICollectionViewDataSource {
         let cell: RecomendCollectionViewCell = collectionView.dequeueReuseableCell(for: indexPath)
         cell.getModel(data: models?[indexPath.row])
         return cell
+    }
+}
+
+extension RecTableViewCell: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        tapAction?(indexPath.item)
     }
 }

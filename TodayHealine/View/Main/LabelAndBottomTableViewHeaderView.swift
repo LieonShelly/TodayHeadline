@@ -10,6 +10,5 @@ import UIKit
 
 class LabelAndBottomTableViewHeaderView: UITableViewHeaderFooterView, ViewNameReusable {
     @IBOutlet weak var tagLabel: UILabel!
-    
     @IBOutlet weak var tagButton: UIButton!
 }
