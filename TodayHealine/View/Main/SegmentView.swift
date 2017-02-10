@@ -11,6 +11,7 @@ import UIKit
 private let segCountPerPage: Int = 3
 private let scrolllineHeight: CGFloat = 2
 class SegmentView: UIView {
+    internal var tapAction: ((_ tapIndex: Int) -> Void)? 
     fileprivate lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.showsHorizontalScrollIndicator = false
@@ -47,8 +48,8 @@ class SegmentView: UIView {
         scrollline.bounds.size = CGSize(width: titleWidths[0], height: scrolllineHeight)
         scrollline.center.x = buttons[0].center.x
         scrollline.center.y = buttons[0].frame.maxY + scrolllineHeight * 0.5
-        
     }
+    
 }
 
 extension SegmentView {
@@ -71,7 +72,6 @@ extension SegmentView {
             i = i + 1
         }
         scrollView.addSubview(scrollline)
-        tapAction(button: buttons[0])
     }
     
     fileprivate func titleWidth(title: String?) -> CGFloat {
@@ -83,7 +83,7 @@ extension SegmentView {
         return size.width + inset * 2
     }
     
-    @objc private func tapAction(button: UIButton) {
+    @objc fileprivate func tapAction(button: UIButton) {
         selectedButton.isSelected = false
         button.isSelected = true
         selectedButton = button
@@ -95,6 +95,7 @@ extension SegmentView {
         UIView.animate(withDuration: 0.25, animations: { 
             self.scrollline.center.x = self.selectedButton.center.x
             self.scrollline.bounds.size.width = self.titleWidths[self.selectedButton.tag]
-        }) 
+        })
+        tapAction?(selectedButton.tag)
     }
 }

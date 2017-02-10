@@ -23,6 +23,9 @@ class RecommenRequstParam: Model {
 class FindRequstParam: Model {
 }
 
+class FindListRequestParam: RecommenRequstParam {
+}
+
 enum HomeRequestPath: EndPointProtocol {
     case banner
     case recommendList
@@ -48,13 +51,14 @@ enum HomeRequestPath: EndPointProtocol {
 
 enum FindRequestPath: EndPointProtocol {
     case bannerAndActivity
-    case listActivity
-
+    case listByNew
+    case listByRec
+    
     var path: String {
         switch self {
         case .bannerAndActivity:
             return "post/index/"
-        case .listActivity:
+        case .listByNew, .listByRec:
             return "post/index/"
         }
     }
@@ -63,8 +67,10 @@ enum FindRequestPath: EndPointProtocol {
         switch self {
         case .bannerAndActivity:
             return "index"
-        case .listActivity:
+        case .listByNew:
             return "listByNew"
+        case .listByRec:
+            return "listByRec"
         }
     }
 }

@@ -60,6 +60,9 @@ extension FindViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let titleView = SegmentView(frame: CGRect(x: 0, y: 0, width: Int(UIScreen.width), height: Int(finVM.segmenTitleViewHeight)), titles: ["最新", "热门", "关注"])
+        titleView.tapAction = { index in
+            print(index)
+        }
         return titleView
     }
     
@@ -84,9 +87,17 @@ extension FindViewController {
     }
     
     fileprivate func loadData() {
-        finVM.load { [unowned self] in
+        finVM.loadbannerAndActivity { [unowned self] in
             self.bannerView.banners = self.finVM.banners
             self.tableView.reloadData()
+        }
+        
+        finVM.loadlistByNew { 
+            
+        }
+        
+        finVM.loadlistByRec {
+            
         }
     }
 }
