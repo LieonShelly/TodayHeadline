@@ -51,6 +51,7 @@
 		CD6DE2C01E45B495007F91F5 /* LabelAndBottomTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6DE2BF1E45B495007F91F5 /* LabelAndBottomTableViewHeaderView.swift */; };
 		CD6DE2C21E45B4A9007F91F5 /* LabelAndBottomTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD6DE2C11E45B4A9007F91F5 /* LabelAndBottomTableViewHeaderView.xib */; };
 		CD86F6E41E496A4C0027D917 /* apple-app-site-association in Resources */ = {isa = PBXBuildFile; fileRef = CD86F6E31E496A4C0027D917 /* apple-app-site-association */; };
+		CD9E08731E4D5FE700FDAE03 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9E08721E4D5FE700FDAE03 /* Kingfisher.framework */; };
 		CDB3ADB51E2C9FF50028E90C /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB3ADA31E2C9FF50028E90C /* Follow.storyboard */; };
 		CDB3ADB71E2C9FF50028E90C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB3ADA61E2C9FF50028E90C /* Home.storyboard */; };
 		CDB3ADB91E2C9FF50028E90C /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDB3ADAA1E2C9FF50028E90C /* Me.storyboard */; };
@@ -126,6 +127,7 @@
 		CD6DE2C11E45B4A9007F91F5 /* LabelAndBottomTableViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelAndBottomTableViewHeaderView.xib; sourceTree = "<group>"; };
 		CD86F6E21E4969EA0027D917 /* TodayHealine.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayHealine.entitlements; sourceTree = "<group>"; };
 		CD86F6E31E496A4C0027D917 /* apple-app-site-association */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "apple-app-site-association"; sourceTree = "<group>"; };
+		CD9E08721E4D5FE700FDAE03 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		CDB3ADA31E2C9FF50028E90C /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Follow.storyboard; sourceTree = "<group>"; };
 		CDB3ADA61E2C9FF50028E90C /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		CDB3ADAA1E2C9FF50028E90C /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD9E08731E4D5FE700FDAE03 /* Kingfisher.framework in Frameworks */,
 				CD6249981E2C768E00E22002 /* Alamofire.framework in Frameworks */,
 				CD6249991E2C768E00E22002 /* ObjectMapper.framework in Frameworks */,
 				CD62499A1E2C768E00E22002 /* PromiseKit.framework in Frameworks */,
@@ -455,6 +458,7 @@
 		F65FC8F29E9C615CDE534977 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD9E08721E4D5FE700FDAE03 /* Kingfisher.framework */,
 				CD6249931E2C768E00E22002 /* Alamofire.framework */,
 				CD6249941E2C768E00E22002 /* ObjectMapper.framework */,
 				CD6249951E2C768E00E22002 /* PromiseKit.framework */,
