@@ -59,6 +59,7 @@ extension FindViewModel {
         let param = FindListRequestParam()
         let request: Promise<FindList> = RequstManager.requst(Router.endpointWithoutToken(param: param, endPoint: endpoint))
         request.then { data -> Void in
+            print(data)
             guard let list = data.list else { return }
             list.forEach { json in
                 guard let typeStr = json["type_id"] as? String, let type = DataType(rawValue: typeStr) else {  return }
@@ -89,7 +90,7 @@ extension FindViewModel {
     }
     
     func numberOfRows(in section: Int) -> Int {
-        return section == 1 ? 40: 1
+        return section == 1 ? findlist.count: 1
     }
     
     func heightForRow(at indexPath: IndexPath) -> CGFloat {

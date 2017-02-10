@@ -49,8 +49,7 @@ extension FindViewController: UITableViewDataSource {
             cell.finVM = finVM
             return cell
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-            cell.contentView.backgroundColor = UIColor.random()
+            let cell: TopicPostTableViewCell = tableView.dequeueReuseableCell(for: indexPath)
             return cell
         default:
             break
@@ -61,7 +60,7 @@ extension FindViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let titleView = SegmentView(frame: CGRect(x: 0, y: 0, width: Int(UIScreen.width), height: Int(finVM.segmenTitleViewHeight)), titles: ["最新", "热门", "关注"])
         titleView.tapAction = { index in
-            print(index)
+
         }
         return titleView
     }
@@ -82,18 +81,18 @@ extension FindViewController {
     fileprivate func setupUI() {
         view.addSubview(tableView)
         automaticallyAdjustsScrollViewInsets = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(R.nib.topicPostTableViewCell)
         tableView.register(R.nib.recHotTableViewCell)
     }
     
     fileprivate func loadData() {
         finVM.loadbannerAndActivity { [unowned self] in
             self.bannerView.banners = self.finVM.banners
-            self.tableView.reloadData()
+//            self.tableView.reloadSections([IndexSet], with: <#T##UITableViewRowAnimation#>)
         }
         
-        finVM.loadlistByNew { 
-            
+        finVM.loadlistByNew { [unowned self] in
+            self.tableView.reloadData()
         }
         
         finVM.loadlistByRec {

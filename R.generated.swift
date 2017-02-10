@@ -132,7 +132,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.nib` struct is generated, and contains static references to 10 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 11 nibs.
   struct nib {
     /// Nib `CycleCollectionViewCell`.
     static let cycleCollectionViewCell = _R.nib._CycleCollectionViewCell()
@@ -154,6 +154,8 @@ struct R: Rswift.Validatable {
     static let recomendCollectionViewCell = _R.nib._RecomendCollectionViewCell()
     /// Nib `RecommandTableViewCell`.
     static let recommandTableViewCell = _R.nib._RecommandTableViewCell()
+    /// Nib `TopicPostTableViewCell`.
+    static let topicPostTableViewCell = _R.nib._TopicPostTableViewCell()
     
     /// `UINib(name: "CycleCollectionViewCell", in: bundle)`
     static func cycleCollectionViewCell(_: Void = ()) -> UIKit.UINib {
@@ -205,10 +207,15 @@ struct R: Rswift.Validatable {
       return UIKit.UINib(resource: R.nib.recommandTableViewCell)
     }
     
+    /// `UINib(name: "TopicPostTableViewCell", in: bundle)`
+    static func topicPostTableViewCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.topicPostTableViewCell)
+    }
+    
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 6 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 7 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `HotCollectionViewCell`.
     static let hotCollectionViewCell: Rswift.ReuseIdentifier<HotCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "HotCollectionViewCell")
@@ -222,6 +229,8 @@ struct R: Rswift.Validatable {
     static let recomendCollectionViewCell: Rswift.ReuseIdentifier<RecomendCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "RecomendCollectionViewCell")
     /// Reuse identifier `RecommandTableViewCell`.
     static let recommandTableViewCell: Rswift.ReuseIdentifier<RecommandTableViewCell> = Rswift.ReuseIdentifier(identifier: "RecommandTableViewCell")
+    /// Reuse identifier `TopicPostTableViewCell`.
+    static let topicPostTableViewCell: Rswift.ReuseIdentifier<TopicPostTableViewCell> = Rswift.ReuseIdentifier(identifier: "TopicPostTableViewCell")
     
     fileprivate init() {}
   }
@@ -435,6 +444,20 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> RecommandTableViewCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RecommandTableViewCell
+      }
+      
+      fileprivate init() {}
+    }
+    
+    struct _TopicPostTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = TopicPostTableViewCell
+      
+      let bundle = R.hostingBundle
+      let identifier = "TopicPostTableViewCell"
+      let name = "TopicPostTableViewCell"
+      
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> TopicPostTableViewCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? TopicPostTableViewCell
       }
       
       fileprivate init() {}

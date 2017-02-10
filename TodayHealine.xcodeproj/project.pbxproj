@@ -77,6 +77,8 @@
 		CDF9C5F91E486E0200AF3060 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF9C5F81E486E0200AF3060 /* Subject.swift */; };
 		CDFCFDA41E4D97A100AF4184 /* Find.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFCFDA31E4D97A100AF4184 /* Find.swift */; };
 		CDFCFDA61E4D9F2500AF4184 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFCFDA51E4D9F2500AF4184 /* Post.swift */; };
+		CDFCFDA91E4DBD5800AF4184 /* TopicPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFCFDA71E4DBD5800AF4184 /* TopicPostTableViewCell.swift */; };
+		CDFCFDAA1E4DBD5800AF4184 /* TopicPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDFCFDA81E4DBD5800AF4184 /* TopicPostTableViewCell.xib */; };
 		CDFE8C251E2E44C3003BA2A3 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFE8C241E2E44C3003BA2A3 /* News.swift */; };
 /* End PBXBuildFile section */
 
@@ -155,6 +157,8 @@
 		CDF9C5F81E486E0200AF3060 /* Subject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
 		CDFCFDA31E4D97A100AF4184 /* Find.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Find.swift; sourceTree = "<group>"; };
 		CDFCFDA51E4D9F2500AF4184 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		CDFCFDA71E4DBD5800AF4184 /* TopicPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicPostTableViewCell.swift; sourceTree = "<group>"; };
+		CDFCFDA81E4DBD5800AF4184 /* TopicPostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopicPostTableViewCell.xib; sourceTree = "<group>"; };
 		CDFE8C241E2E44C3003BA2A3 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		F198029347078D1222D49A81 /* Pods-TodayHealine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayHealine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TodayHealine/Pods-TodayHealine.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -226,6 +230,8 @@
 				CD60B2BD1E4ACB0600B11E3B /* RecomendCollectionViewCell.xib */,
 				CD60B2CC1E4AD31700B11E3B /* HotCollectionViewCell.swift */,
 				CD60B2CD1E4AD31700B11E3B /* HotCollectionViewCell.xib */,
+				CDFCFDA71E4DBD5800AF4184 /* TopicPostTableViewCell.swift */,
+				CDFCFDA81E4DBD5800AF4184 /* TopicPostTableViewCell.xib */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -563,6 +569,7 @@
 				CD60B2BF1E4ACB0600B11E3B /* RecomendCollectionViewCell.xib in Resources */,
 				CD62497D1E2C6A9E00E22002 /* Main.storyboard in Resources */,
 				CDEB19981E389576005F1D84 /* HomeNaviBar.xib in Resources */,
+				CDFCFDAA1E4DBD5800AF4184 /* TopicPostTableViewCell.xib in Resources */,
 				CD4BFC531E38EECA00EF4DF2 /* RecommandTableViewCell.xib in Resources */,
 				CDB3ADB51E2C9FF50028E90C /* Follow.storyboard in Resources */,
 				CDB3ADB71E2C9FF50028E90C /* Home.storyboard in Resources */,
@@ -704,6 +711,7 @@
 				CD3A546D1E39CAFA0045C537 /* Network.swift in Sources */,
 				CD4090111E3847FC0045DD9E /* CycleView.swift in Sources */,
 				CD60B2E11E4AEE6E00B11E3B /* BaseCollectionViewCell.swift in Sources */,
+				CDFCFDA91E4DBD5800AF4184 /* TopicPostTableViewCell.swift in Sources */,
 				CD3A546F1E39CB2E0045C537 /* FindViewModel.swift in Sources */,
 				CDB3ADC01E2CA1240028E90C /* MainNavigationController.swift in Sources */,
 				CDB3ADBE1E2CA1060028E90C /* MainTabBarController.swift in Sources */,
