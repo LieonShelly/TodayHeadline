@@ -59,7 +59,6 @@ extension FindViewModel {
         let param = FindListRequestParam()
         let request: Promise<FindList> = RequstManager.requst(Router.endpointWithoutToken(param: param, endPoint: endpoint))
         request.then { data -> Void in
-            print(data)
             guard let list = data.list else { return }
             list.forEach { json in
                 guard let typeStr = json["type_id"] as? String, let type = DataType(rawValue: typeStr) else {  return }
@@ -97,7 +96,7 @@ extension FindViewModel {
         if indexPath.section == 0 {
             return recommandAndHotSectionHeight
         }
-        return 80.0
+        return 258
     }
     
     func heightForHeader(in section: Int) -> CGFloat {

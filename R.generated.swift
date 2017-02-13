@@ -56,7 +56,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 10 images.
+  /// This `R.image` struct is generated, and contains static references to 14 images.
   struct image {
     /// Image `daren`.
     static let daren = Rswift.ImageResource(bundle: R.hostingBundle, name: "daren")
@@ -78,6 +78,14 @@ struct R: Rswift.Validatable {
     static let zan2 = Rswift.ImageResource(bundle: R.hostingBundle, name: "zan2")
     /// Image `zan`.
     static let zan = Rswift.ImageResource(bundle: R.hostingBundle, name: "zan")
+    /// Image `分享`.
+    static let 分享 = Rswift.ImageResource(bundle: R.hostingBundle, name: "分享")
+    /// Image `头像`.
+    static let 头像 = Rswift.ImageResource(bundle: R.hostingBundle, name: "头像")
+    /// Image `评论`.
+    static let 评论 = Rswift.ImageResource(bundle: R.hostingBundle, name: "评论")
+    /// Image `赞`.
+    static let 赞 = Rswift.ImageResource(bundle: R.hostingBundle, name: "赞")
     
     /// `UIImage(named: "daren", bundle: ..., traitCollection: ...)`
     static func daren(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -127,6 +135,26 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "zan2", bundle: ..., traitCollection: ...)`
     static func zan2(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.zan2, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "分享", bundle: ..., traitCollection: ...)`
+    static func 分享(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.分享, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "头像", bundle: ..., traitCollection: ...)`
+    static func 头像(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.头像, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "评论", bundle: ..., traitCollection: ...)`
+    static func 评论(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.评论, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "赞", bundle: ..., traitCollection: ...)`
+    static func 赞(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.赞, compatibleWith: traitCollection)
     }
     
     fileprivate init() {}
@@ -314,6 +342,7 @@ struct _R: Rswift.Validatable {
   struct nib: Rswift.Validatable {
     static func validate() throws {
       try _HomeNaviBar.validate()
+      try _TopicPostTableViewCell.validate()
     }
     
     struct _CycleCollectionViewCell: Rswift.NibResourceType {
@@ -449,7 +478,7 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct _TopicPostTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+    struct _TopicPostTableViewCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
       typealias ReusableType = TopicPostTableViewCell
       
       let bundle = R.hostingBundle
@@ -458,6 +487,13 @@ struct _R: Rswift.Validatable {
       
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [NSObject : AnyObject]? = nil) -> TopicPostTableViewCell? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? TopicPostTableViewCell
+      }
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "赞") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named '赞' is used in nib 'TopicPostTableViewCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "头像") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named '头像' is used in nib 'TopicPostTableViewCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "分享") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named '分享' is used in nib 'TopicPostTableViewCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "评论") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named '评论' is used in nib 'TopicPostTableViewCell', but couldn't be loaded.") }
       }
       
       fileprivate init() {}

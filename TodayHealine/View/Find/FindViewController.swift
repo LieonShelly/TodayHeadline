@@ -16,6 +16,7 @@ class FindViewController: BaseViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableHeaderView = self.bannerView
+        tableView.separatorStyle = .none
         return tableView
     }()
 
@@ -50,6 +51,7 @@ extension FindViewController: UITableViewDataSource {
             return cell
         case 1:
             let cell: TopicPostTableViewCell = tableView.dequeueReuseableCell(for: indexPath)
+            cell.getModel(data: finVM.findlist[indexPath.row])
             return cell
         default:
             break
@@ -75,6 +77,10 @@ extension FindViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return finVM.heightForHeader(in: section)
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    }
 }
 
 extension FindViewController {
@@ -88,7 +94,7 @@ extension FindViewController {
     fileprivate func loadData() {
         finVM.loadbannerAndActivity { [unowned self] in
             self.bannerView.banners = self.finVM.banners
-//            self.tableView.reloadSections([IndexSet], with: <#T##UITableViewRowAnimation#>)
+             self.tableView.reloadData()
         }
         
         finVM.loadlistByNew { [unowned self] in

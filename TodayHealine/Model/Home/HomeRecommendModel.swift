@@ -12,7 +12,7 @@ import ObjectMapper
 class User: Model {
     var userID: String?
     var nickname: String?
-    var avatar: String?
+    var avatar: URL?
     var articleTopicCount: String?
     var isOfficial: Bool = false
     var postCount: String?
@@ -20,7 +20,7 @@ class User: Model {
     override func mapping(map: Map) {
         userID <- map["user_id"]
         nickname <- map["nickname"]
-        avatar <- map["avatar"]
+        avatar <- (map["avatar"], URLTransform())
         articleTopicCount <- map["article_topic_count"]
          isOfficial <- (map["is_official"], BoolStringTransform())
          postCount <- map["post_count"]
@@ -36,6 +36,13 @@ class ImageModel: Model {
     }
     
 }
+
+extension ImageModel: BannerProtocol {
+    func imageURL() -> URL? {
+        return self.url
+    }
+}
+
 class TopicModel: Model {
     var comments: Int = 0
     var createTimeStr: String?

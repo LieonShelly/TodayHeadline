@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class RecommandTableViewCell: UITableViewCell {
+final class RecommandTableViewCell: BaseTableViewCell {
   @IBOutlet  weak var prictureView: UIImageView!
   @IBOutlet  weak var firstButton: UIButton!
   @IBOutlet  weak var secondButton: UIButton!
@@ -16,4 +16,4 @@ final class RecommandTableViewCell: UITableViewCell {
   @IBOutlet  weak var titleLabel: UILabel!
 }
 
-extension RecommandTableViewCell:  ViewNameReusable, View, RecommandTableViewCellProtocol { }
+extension RecommandTableViewCell: View, RecommandTableViewCellProtocol { }

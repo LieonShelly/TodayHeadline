@@ -9,7 +9,7 @@
 import UIKit
 
 class RecomendCollectionViewCell: BaseCollectionViewCell {
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     
 }

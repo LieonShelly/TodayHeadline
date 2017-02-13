@@ -50,7 +50,7 @@
             </constraints>
             <size key="customSize" width="189" height="95"/>
             <connections>
-                <outlet property="imageView" destination="Rit-kj-csE" id="qgA-rg-zvU"/>
+                <outlet property="iconView" destination="Rit-kj-csE" id="5A6-YD-Vhu"/>
                 <outlet property="sublabel" destination="qgP-TK-ldp" id="UrC-Jf-BdP"/>
                 <outlet property="titleLabel" destination="EaT-KU-Lx8" id="xz2-hL-2LR"/>
             </connections>

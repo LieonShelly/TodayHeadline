@@ -10,13 +10,26 @@ import UIKit
 import Kingfisher
 import ObjectMapper
 
+protocol OneViewProtocol {
+    weak var view: UIView! {get set}
+}
+
+protocol ButtonActionProtocol {
+    var tapAction:((_ buttonTag: Int) -> Void)? {get set}
+}
+
 protocol OneLabelProtocol {
     weak var sublabel: UILabel! {get set}
 }
 
+protocol TwoLabelProtocol {
+    weak var firstLabel: UILabel! {get set}
+    weak var secondLabel: UILabel! {get set}
+}
+
 protocol OneImageOneLabelProtocol {
     weak var titleLabel: UILabel! {get set}
-    weak var imageView: UIImageView! {get set}
+    weak var iconView: UIImageView! {get set}
 }
 
 protocol OneCollectionViewProtocol {
@@ -110,15 +123,42 @@ extension View where Self: RecTableViewCell {
 extension View where Self: OneImageOneLabelProtocol {
     func getModel<M>(data: M) {
         guard let model = data as? SubjectModel else { return  }
-        imageView.kf.setImage(with: model.photo)
+        iconView.kf.setImage(with: model.photo)
         titleLabel.text = model.title
     }
 }
 extension View where Self: HotCollectionViewCell {
     func getModel<M>(data: M) {
         guard let model = data as? Activity else { return  }
-        imageView.kf.setImage(with: model.icon)
+        iconView.kf.setImage(with: model.icon)
         titleLabel.text = model.title
         sublabel.text = "\(model.userCount)人参与"
+    }
+}
+
+extension View where Self: TopicPostTableViewCell {
+     func getModel<M>(data: M) {
+         guard let model = data as? FindBox else { return  }
+        switch model {
+        case .topic(let topicModel):
+            iconView.kf.setImage(with: topicModel.user?.avatar)
+            titleLabel.text = topicModel.user?.nickname
+            sublabel.text = topicModel.datestr
+            firstLabel.text = topicModel.title
+            guard let countStr = topicModel.views else { return }
+            secondLabel.text = "\(countStr)浏览"
+            bannerView.banners = topicModel.pics
+            break
+        case .post(let postModel):
+            print(postModel)
+            iconView.kf.setImage(with: postModel.user?.avatar)
+            titleLabel.text = postModel.user?.nickname
+            sublabel.text = postModel.datestr
+            firstLabel.text = postModel.content
+            guard let countStr = postModel.dynamic?.views else { return }
+            secondLabel.text = "\(countStr)浏览"
+            bannerView.banners = postModel.pics
+            break
+        }
     }
 }

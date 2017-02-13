@@ -9,7 +9,7 @@
 import UIKit
 
 class HotCollectionViewCell: UICollectionViewCell, OneLabelProtocol, OneImageOneLabelProtocol, View {
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var sublabel: UILabel!
 }

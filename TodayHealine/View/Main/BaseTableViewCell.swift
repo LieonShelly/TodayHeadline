@@ -8,6 +8,11 @@
 
 import UIKit
 
-class BaseTableViewCell: UITableViewCell {}
+class BaseTableViewCell: UITableViewCell {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle = .none
+    }
+}
 
 extension BaseTableViewCell: ViewNameReusable {}
