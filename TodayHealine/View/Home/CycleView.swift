@@ -11,22 +11,41 @@ import UIKit
 class CycleView: UIView {
     var banners: [BannerProtocol]? {
         didSet {
-            removeTimer()
-            addTimer()
             collectionView.reloadData()
-            pageControl.numberOfPages = banners?.count ?? 0
-            let indexPath = IndexPath(item: (banners?.count ?? 0) * 100, section: 0)
-            collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
+            if banners?.count ?? 0 == 1 {
+                pageControl.numberOfPages = 0
+            } else {
+                 pageControl.numberOfPages = banners?.count ?? 0
+            }
+            if isCloseBanner == false {
+                removeTimer()
+                addTimer()
+                let indexPath = IndexPath(item: (banners?.count ?? 0) * 100, section: 0)
+                collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
+            }
+            
         }
     }
     var tapAction: ((_ index: Int) -> Void)?
     @IBOutlet weak fileprivate var collectionView: UICollectionView!
     @IBOutlet weak fileprivate var pageControl: UIPageControl!
+    
     fileprivate var cycleTimer: Timer?
+    fileprivate var isCloseBanner: Bool = false
     static func cycleView() -> CycleView {
         let bundle = Bundle.main.loadNibNamed("CycleView", owner: nil, options: nil)
         guard let view = bundle?.first as? CycleView else { return CycleView() }
         return view
+    }
+    
+    func closeBanner() {
+        removeTimer()
+        isCloseBanner = true
+        
+    }
+    
+    func reloadData() {
+        collectionView.reloadData()
     }
 }
 
@@ -35,6 +54,7 @@ extension CycleView {
     override func awakeFromNib() {
         super.awakeFromNib()
         autoresizingMask = []
+        collectionView.bounces = false
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isPagingEnabled = true
@@ -58,13 +78,20 @@ extension CycleView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (banners?.count ?? 0) * 10000
+        
+        return isCloseBanner == true ? (banners?.count ?? 0): (banners?.count ?? 0) * 10000
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as? CycleCollectionViewCell, let dataArray = banners else { return UICollectionViewCell() }
         cell.backgroundColor = .random()
-        cell.getModel(data: dataArray[indexPath.item % dataArray.count])
+        var index: Int = 0
+        if isCloseBanner {
+            index = indexPath.item
+        } else {
+            index = indexPath.item % dataArray.count
+        }
+        cell.getModel(data: dataArray[index])
         return cell
     }
     
@@ -73,21 +100,34 @@ extension CycleView: UICollectionViewDataSource {
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        addTimer()
+        if isCloseBanner == false {
+            addTimer()
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetX = scrollView.contentOffset.x + collectionView.bounds.width * 0.5
         let currentPage = Int(offsetX / collectionView.bounds.width)
         pageControl.currentPage = currentPage % (banners?.count ?? 1)
-        
     }
 }
 
-extension CycleView: UICollectionViewDelegate {
+extension CycleView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let index = Int(indexPath.row % ((banners?.count) ?? 1))
         tapAction?(index)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return collectionView.frame.size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0.0
     }
 }
 

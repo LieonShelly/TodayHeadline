@@ -9,21 +9,30 @@
 import UIKit
 import PromiseKit
 import ObjectMapper
+import Kingfisher
 
 private let segTitleViewHeight: CGFloat = 35
 private let contentTopInst: CGFloat = UIScreen.height  - UITabBar.height
 private let segTitleViewY: CGFloat = UIScreen.height  - segTitleViewHeight - UITabBar.height
 private let banheight: CGFloat = 200
-private let recommandAndHotSectionHeight: CGFloat = UIScreen.height - banheight - UITabBar.height - segTitleViewHeight
+private let recommandAndHotSectionHeigh: CGFloat = UIScreen.height - banheight - UITabBar.height - segTitleViewHeight
 private let recommendSectionHeigh: CGFloat = 150
-private let hotSectionHeigh: CGFloat = recommandAndHotSectionHeight - recommendSectionHeigh
+private let hotSectionHeigh: CGFloat = recommandAndHotSectionHeigh - recommendSectionHeigh
 private let sectionHeaderHeigh: CGFloat = segTitleViewHeight
+private let userBarHeight: CGFloat = 44
+private let titleLabelTop: CGFloat = 8
+private let titleLabelHeight: CGFloat = 30
+private let titleLabelBottom: CGFloat = 20
+private let toolBarAndDividlineHeight: CGFloat = 35
 
 class FindViewModel {
    lazy var banners: [Banner] = [Banner]()
    lazy var activities: [Activity] = [Activity]()
    lazy var subjecList: [SubjectModel] = [SubjectModel]()
    lazy var findlist: [FindBox] = [FindBox]()
+   lazy var listCellHeight: [CGFloat] = []
+   lazy var listImageViewHeight: [CGFloat] = []
+   lazy var cacheListCellHeight: [String: CGFloat] = [:]
    let bannerHeight: CGFloat = banheight
    let segmenTitleViewHeight: CGFloat = segTitleViewHeight
    let contentTopInset: CGFloat = contentTopInst
@@ -31,6 +40,7 @@ class FindViewModel {
    let hotSectionHeight: CGFloat = hotSectionHeigh
    let recommendSectionHeight: CGFloat = recommendSectionHeigh
    let sectionHeaderHeight: CGFloat = sectionHeaderHeigh
+   let recommandAndHotSectionHeight: CGFloat = recommandAndHotSectionHeigh
 }
 
 extension FindViewModel {
@@ -76,11 +86,46 @@ extension FindViewModel {
                 }
             }
             finish()
+            
         }.catch { error in
             
         }
         
     }
+    
+    private func caculateImageSize(list: [FindBox], finish: @escaping () -> Void) {
+        let group = DispatchGroup()
+        list.forEach { box in
+            switch box {
+            case .topic(let topicModel):
+                topicModel.pics?.forEach { imageModel in
+                    group.enter()
+                    guard  let url = imageModel.url else { return }
+                    ImageDownloader.default.downloadImage(with: url, options: nil, progressBlock: nil, completionHandler: { (image, error, _, _) in
+                        if let size = image?.size {
+                            imageModel.imageSize = CGSize(width: size.width * 0.5, height: size.height * 0.5)
+                            group.leave()
+                        }
+                    })
+                }
+            case .post(let postModel):
+                postModel.pics?.forEach { imageModel in
+                    group.enter()
+                    guard  let url = imageModel.url else { return }
+                    ImageDownloader.default.downloadImage(with: url, options: nil, progressBlock: nil, completionHandler: { (image, error, _, _) in
+                        if let size = image?.size {
+                             imageModel.imageSize = CGSize(width: size.width, height: size.height)
+                             print(size.width / size.height)
+                            group.leave()
+                        }
+                    })
+                }
+                break
+            }
+        }
+        group.notify(queue: .main, execute: finish)
+    }
+    
 }
 
 extension FindViewModel {
@@ -95,8 +140,8 @@ extension FindViewModel {
     func heightForRow(at indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 {
             return recommandAndHotSectionHeight
-        }
-        return 258
+        } 
+        return UITableViewAutomaticDimension
     }
     
     func heightForHeader(in section: Int) -> CGFloat {
@@ -105,6 +150,37 @@ extension FindViewModel {
         } else {
             return 0.0
         }
+    }
+    
+    private func caculateTopicCellHeight(model: TopicModel) -> CGFloat {
+        let userBar: CGFloat = 44
+        let  collectionViewHeight: CGFloat = 0
+        let titleLabelTop: CGFloat = 10
+        let titleLabelBottom: CGFloat = 18
+        var titlLabelHeight: CGFloat = 30
+        let ns = NSString(string: model.title ?? "")
+        let maxSize = CGSize(width: (UIScreen.width - 2 * 10), height: 3000)
+        let size = ns.boundingRect(with: maxSize, options: .init(rawValue: 0), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 13)], context: nil).size
+        titlLabelHeight = size.height
+        let toolBar: CGFloat = 30
+        let dividline: CGFloat = 5
+        return userBar + collectionViewHeight + titlLabelHeight + titleLabelTop + titleLabelBottom + toolBar + dividline
+    }
+    
+    private func caculatePostCellHeight(model: Post) -> CGFloat {
+        let userBar: CGFloat = 44
+        // (UIScreen.width - 2 * 10) * 0.75
+        let  collectionViewHeight: CGFloat = 0
+        let titleLabelTop: CGFloat = 10
+        let titleLabelBottom: CGFloat = 18
+        var titlLabelHeight: CGFloat = 30
+        let ns = NSString(string: model.content ?? "")
+        let maxSize = CGSize(width: (UIScreen.width - 2 * 10), height: 3000)
+        let size = ns.boundingRect(with: maxSize, options: .init(rawValue: 0), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 13)], context: nil).size
+        titlLabelHeight = size.height
+        let toolBar: CGFloat = 30
+        let dividline: CGFloat = 5
+        return userBar + collectionViewHeight + titlLabelHeight + titleLabelTop + titleLabelBottom + toolBar + dividline
     }
 }
 

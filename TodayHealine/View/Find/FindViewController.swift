@@ -86,6 +86,9 @@ extension FindViewController: UITableViewDelegate {
 extension FindViewController {
     fileprivate func setupUI() {
         view.addSubview(tableView)
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 50
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 44 + 5, right: 0)
         automaticallyAdjustsScrollViewInsets = false
         tableView.register(R.nib.topicPostTableViewCell)
         tableView.register(R.nib.recHotTableViewCell)

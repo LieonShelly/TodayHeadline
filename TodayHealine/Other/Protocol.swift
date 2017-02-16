@@ -10,6 +10,10 @@ import UIKit
 import Kingfisher
 import ObjectMapper
 
+protocol BannerViewProtocol {
+    weak var collection: UICollectionView! {get set}
+    weak var pageControl: UIPageControl! {get set}
+}
 protocol OneViewProtocol {
     weak var view: UIView! {get set}
 }
@@ -148,9 +152,9 @@ extension View where Self: TopicPostTableViewCell {
             guard let countStr = topicModel.views else { return }
             secondLabel.text = "\(countStr)浏览"
             bannerView.banners = topicModel.pics
+            configImageView(height: (UIScreen.width - 2 * 10) * 0.5)
             break
         case .post(let postModel):
-            print(postModel)
             iconView.kf.setImage(with: postModel.user?.avatar)
             titleLabel.text = postModel.user?.nickname
             sublabel.text = postModel.datestr
@@ -158,7 +162,9 @@ extension View where Self: TopicPostTableViewCell {
             guard let countStr = postModel.dynamic?.views else { return }
             secondLabel.text = "\(countStr)浏览"
             bannerView.banners = postModel.pics
+            configImageView(height: (UIScreen.width - 2 * 10) * 0.75 )
             break
         }
+        
     }
 }

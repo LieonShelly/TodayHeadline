@@ -15,12 +15,18 @@ class TopicPostTableViewCell: BaseTableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
-    @IBOutlet weak var view: UIView!
-    var tapAction: ((Int) -> Void)?
     
+    @IBOutlet weak var view: UIView!
+   
+    @IBOutlet weak var imageViewHeightCons: NSLayoutConstraint!
+    
+    @IBOutlet weak var dividline: UIView!
+    var tapAction: ((Int) -> Void)?
+    var rowheight: CGFloat = 0.0
     override func awakeFromNib() {
         super.awakeFromNib()
         view.addSubview(bannerView)
+        bannerView.closeBanner()
         bannerView.snp.makeConstraints { make in
             make.top.equalTo(view.snp.top)
             make.bottom.equalTo(view.snp.bottom)
@@ -29,10 +35,16 @@ class TopicPostTableViewCell: BaseTableViewCell {
         }
     }
     
+    func configImageView(height: CGFloat) {
+        imageViewHeightCons.constant = height
+        bannerView.reloadData()
+    }
+    
     @IBAction func buttonTapAction(_ sender: UIButton) {
         print(sender.tag)
         tapAction?(sender.tag)
     }
+    
 }
 
-extension TopicPostTableViewCell: OneLabelProtocol, TwoLabelProtocol, OneImageOneLabelProtocol, ButtonActionProtocol, View, OneViewProtocol {}
+extension TopicPostTableViewCell: OneLabelProtocol, TwoLabelProtocol, OneImageOneLabelProtocol, ButtonActionProtocol, View {}

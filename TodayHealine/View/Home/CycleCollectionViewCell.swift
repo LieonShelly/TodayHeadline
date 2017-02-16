@@ -18,4 +18,4 @@ class CycleCollectionViewCell: UICollectionViewCell {
 
 }
 
-extension CycleCollectionViewCell: CycleCollectionViewCellProtocol, View { }
+extension CycleCollectionViewCell: CycleCollectionViewCellProtocol, View, ViewNameReusable { }

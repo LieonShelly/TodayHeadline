@@ -28,8 +28,7 @@ class User: Model {
 }
 class ImageModel: Model {
     var url: URL?
-    var width: CGFloat = 0.0
-    var height: CGFloat = 0.0
+    var imageSize: CGSize = .zero
     
     override func mapping(map: Map) {
         url <- (map["url"], URLTransform())
@@ -92,5 +91,6 @@ class TopicModel: Model {
         praises <- map["praises"]
         views <- map["views"]
         user <- map["user"]
+        pics <- map["pics"]
     }
 }
