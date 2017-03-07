@@ -27,7 +27,7 @@ class FollowViewController: UIViewController {
         let fetchrequset: NSFetchRequest<Student> = Student.fetchRequest()
          guard let searchResults = try? DataBaseController.getContext().fetch(fetchrequset) else { return  }
         for result in searchResults {
-            print("\(result.firstName!) \(result.lastName!) is \(result.age) years old.")
+//            print("\(result.firstName!) \(result.lastName!) is \(result.age) years old.")
         }
     }
 
