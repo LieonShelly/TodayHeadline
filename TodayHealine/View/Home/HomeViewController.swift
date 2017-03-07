@@ -47,7 +47,7 @@ class HomeViewController: BaseViewController {
         let y: CGFloat = self.bannerView.frame.maxY
         let height: CGFloat = titleViewHeight
         let width: CGFloat = UIScreen.width
-        let titleView = PageTitleView(frame: CGRect(x: x, y: y, width: width, height: height), titles: ["推荐", "热点", "成都", "视屏", "社会", "科技", "火山直播"])
+        let titleView = PageTitleView(frame: CGRect(x: x, y: y, width: width, height: height), titles: ["推荐", "热点", "成都", "视屏", "社会", "科技"])
         titleView.normalColor = (0, 0, 0)
         titleView.selectColor = (255, 0, 0)
         titleView.backgroundColor = UIColor.white

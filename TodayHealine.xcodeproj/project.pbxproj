@@ -273,6 +273,13 @@
 			path = TodayHealine;
 			sourceTree = "<group>";
 		};
+		CD7458CC1E6E8B3F00928264 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
 		CDB3AD981E2C9FF50028E90C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +332,7 @@
 			isa = PBXGroup;
 			children = (
 				CDBC1F091E2F1F0D00A2BCD0 /* Protocol.swift */,
+				CD7458CC1E6E8B3F00928264 /* Vender */,
 				CDB3AD9F1E2C9FF50028E90C /* Extension */,
 				CDB3ADA01E2C9FF50028E90C /* Network */,
 				CDDD99941E34931F00E10034 /* Transform.swift */,
@@ -848,7 +856,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F198029347078D1222D49A81 /* Pods-TodayHealine.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TodayHealine/TodayHealine.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: 仁军 李 (N3Y96X5CX3)";
@@ -872,7 +880,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 506E541DCD7479D122137269 /* Pods-TodayHealine.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TodayHealine/TodayHealine.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: 仁军 李 (N3Y96X5CX3)";

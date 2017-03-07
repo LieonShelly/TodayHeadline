@@ -7,14 +7,23 @@
 //
 
 import UIKit
+import LRefresh
 
 class RecommendViewController: BaseTableViewController {
     fileprivate lazy var recommandVM: RecomandViewModel =  RecomandViewModel()
+    fileprivate lazy var refresh: LRefreshControl = {
+        let refresh = LRefreshControl()
+        refresh.needToShine(text: "我要操你")
+        return refresh
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        loadData()
+        tableView.addSubview(refresh)
+        refresh.refreshHandler = {
+            self.loadData()
+        }
   }
 }
 
@@ -39,11 +48,13 @@ extension RecommendViewController {
         tableView.rowHeight = 316
         tableView.separatorStyle = .none
         tableView.register(R.nib.recommandTableViewCell)
+        
     }
     
     fileprivate func loadData() {
         recommandVM.loadData {
           self.tableView.reloadData()
+            self.refresh.endRefreshing()
         }
     }
 }
