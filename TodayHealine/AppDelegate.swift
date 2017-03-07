@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupAppearance()
         return true
     }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        DataBaseController.saveContext()
+    }
 }
 
 extension AppDelegate {
