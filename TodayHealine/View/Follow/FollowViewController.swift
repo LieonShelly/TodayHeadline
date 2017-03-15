@@ -10,25 +10,77 @@ import UIKit
 import CoreData
 
 class FollowViewController: UIViewController {
-
+    var foodItem: [Food] = [Food]()
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let studentClassName: String = "Student"
-        let courseClassName: String = "Course"
-        guard  let student: Student = NSEntityDescription.insertNewObject(forEntityName: studentClassName, into: DataBaseController.getContext()) as? Student else { return }
-        student.age = 12
-        student.firstName = "Jhon"
-        student.lastName = "Smith"
-        guard let course: Course = NSEntityDescription.insertNewObject(forEntityName: courseClassName, into: DataBaseController.getContext()) as? Course else { return }
-        course.courseName = "Computer Science 402"
-        
-        DataBaseController.saveContext()
-        
-        let fetchrequset: NSFetchRequest<Student> = Student.fetchRequest()
-         guard let searchResults = try? DataBaseController.getContext().fetch(fetchrequset) else { return  }
-        for result in searchResults {
-//            print("\(result.firstName!) \(result.lastName!) is \(result.age) years old.")
-        }
+        loadData()
+        setupUI()
     }
 
+    @IBAction func remind(_ sender: Any) {
+        (UIApplication.shared.delegate as? AppDelegate)?.scheduleNotification()
+    }
+    
+    @IBAction func addFoodAction(_ sender: UIButton) {
+        let foodItem = Food(context: DataBaseController.getContext())
+        foodItem.added = NSDate()
+        if sender.tag == 0 {
+            foodItem.type = "Fruit"
+        } else {
+            foodItem.type = "Vegetable"
+        }
+        DataBaseController.saveContext()
+        loadData()
+    }
+}
+
+extension FollowViewController {
+    fileprivate func setupUI() {
+        tableView.rowHeight = 60
+        tableView.dataSource = self
+    }
+    
+    fileprivate func loadData() {
+        let foodRequest: NSFetchRequest<Food> =  Food.fetchRequest()
+        let sortDesciptor = NSSortDescriptor(key: "added", ascending: false)
+        foodRequest.sortDescriptors = [sortDesciptor]
+         guard let items = try? DataBaseController.getContext().fetch(foodRequest) else { return  }
+        if !items.isEmpty {
+            foodItem = items
+        }
+        tableView.reloadData()
+    }
+    
+}
+
+extension FollowViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return foodItem.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let food = foodItem[indexPath.row]
+        cell.textLabel?.text = food.type
+        
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "MMMM d yyyy, hh:mm"
+        cell.detailTextLabel?.text = dateFormat.string(from: food.added as Date? ?? Date())
+        
+        if food.type == "Fruit" {
+            cell.imageView?.image = UIImage(named: "Apple")
+        } else {
+            cell.imageView?.image = UIImage(named: "Salad")
+        }
+        
+        return cell
+    }
+    
 }

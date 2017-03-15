@@ -21,10 +21,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.file` struct is generated, and contains static references to 3 files.
+  /// This `R.file` struct is generated, and contains static references to 4 files.
   struct file {
     /// Resource file `.swiftlint.yml`.
     static let swiftlintYml = Rswift.FileResource(bundle: R.hostingBundle, name: ".swiftlint", pathExtension: "yml")
+    /// Resource file `Apple.png`.
+    static let applePng = Rswift.FileResource(bundle: R.hostingBundle, name: "Apple", pathExtension: "png")
     /// Resource file `Cartfile`.
     static let cartfile = Rswift.FileResource(bundle: R.hostingBundle, name: "Cartfile", pathExtension: "")
     /// Resource file `apple-app-site-association`.
@@ -33,6 +35,12 @@ struct R: Rswift.Validatable {
     /// `bundle.url(forResource: ".swiftlint", withExtension: "yml")`
     static func swiftlintYml(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.swiftlintYml
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+    
+    /// `bundle.url(forResource: "Apple", withExtension: "png")`
+    static func applePng(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.applePng
       return fileResource.bundle.url(forResource: fileResource)
     }
     
@@ -56,8 +64,10 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 14 images.
+  /// This `R.image` struct is generated, and contains static references to 15 images.
   struct image {
+    /// Image `Salad`.
+    static let salad = Rswift.ImageResource(bundle: R.hostingBundle, name: "Salad")
     /// Image `daren`.
     static let daren = Rswift.ImageResource(bundle: R.hostingBundle, name: "daren")
     /// Image `home_email_black`.
@@ -86,6 +96,11 @@ struct R: Rswift.Validatable {
     static let 评论 = Rswift.ImageResource(bundle: R.hostingBundle, name: "评论")
     /// Image `赞`.
     static let 赞 = Rswift.ImageResource(bundle: R.hostingBundle, name: "赞")
+    
+    /// `UIImage(named: "Salad", bundle: ..., traitCollection: ...)`
+    static func salad(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.salad, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "daren", bundle: ..., traitCollection: ...)`
     static func daren(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
@@ -243,7 +258,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 7 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 8 reuse identifiers.
   struct reuseIdentifier {
     /// Reuse identifier `HotCollectionViewCell`.
     static let hotCollectionViewCell: Rswift.ReuseIdentifier<HotCollectionViewCell> = Rswift.ReuseIdentifier(identifier: "HotCollectionViewCell")
@@ -259,6 +274,8 @@ struct R: Rswift.Validatable {
     static let recommandTableViewCell: Rswift.ReuseIdentifier<RecommandTableViewCell> = Rswift.ReuseIdentifier(identifier: "RecommandTableViewCell")
     /// Reuse identifier `TopicPostTableViewCell`.
     static let topicPostTableViewCell: Rswift.ReuseIdentifier<TopicPostTableViewCell> = Rswift.ReuseIdentifier(identifier: "TopicPostTableViewCell")
+    /// Reuse identifier `cell`.
+    static let cell: Rswift.ReuseIdentifier<UIKit.UITableViewCell> = Rswift.ReuseIdentifier(identifier: "cell")
     
     fileprivate init() {}
   }
@@ -336,6 +353,7 @@ struct R: Rswift.Validatable {
 
 struct _R: Rswift.Validatable {
   static func validate() throws {
+    try storyboard.validate()
     try nib.validate()
   }
   
@@ -502,7 +520,11 @@ struct _R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  struct storyboard {
+  struct storyboard: Rswift.Validatable {
+    static func validate() throws {
+      try follow.validate()
+    }
+    
     struct find: Rswift.StoryboardResourceWithInitialControllerType {
       typealias InitialController = UIKit.UINavigationController
       
@@ -512,11 +534,16 @@ struct _R: Rswift.Validatable {
       fileprivate init() {}
     }
     
-    struct follow: Rswift.StoryboardResourceWithInitialControllerType {
+    struct follow: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
       typealias InitialController = UIKit.UINavigationController
       
       let bundle = R.hostingBundle
       let name = "Follow"
+      
+      static func validate() throws {
+        if UIKit.UIImage(named: "Apple") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Apple' is used in storyboard 'Follow', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "Salad") == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Salad' is used in storyboard 'Follow', but couldn't be loaded.") }
+      }
       
       fileprivate init() {}
     }
