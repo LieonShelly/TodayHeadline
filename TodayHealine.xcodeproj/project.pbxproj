@@ -75,7 +75,7 @@
 		CDB401201E36754600B3667B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB4011F1E36754600B3667B /* HomeViewModel.swift */; };
 		CDB401221E3676A600B3667B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB401211E3676A600B3667B /* Constant.swift */; };
 		CDBC1F0A1E2F1F0D00A2BCD0 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC1F091E2F1F0D00A2BCD0 /* Protocol.swift */; };
-		CDD2AC7D1E793F4B00116DAA /* Apple.png in Resources */ = {isa = PBXBuildFile; fileRef = CDD2AC7C1E793F4B00116DAA /* Apple.png */; };
+		CDD2AC7D1E793F4B00116DAA /* Ap.png in Resources */ = {isa = PBXBuildFile; fileRef = CDD2AC7C1E793F4B00116DAA /* Ap.png */; };
 		CDDD99931E348BE500E10034 /* BoxEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD99921E348BE500E10034 /* BoxEnum.swift */; };
 		CDDD99951E34931F00E10034 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD99941E34931F00E10034 /* Transform.swift */; };
 		CDEB19961E389569005F1D84 /* HomeNaviBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEB19951E389569005F1D84 /* HomeNaviBar.swift */; };
@@ -163,7 +163,7 @@
 		CDB4011F1E36754600B3667B /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CDB401211E3676A600B3667B /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		CDBC1F091E2F1F0D00A2BCD0 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
-		CDD2AC7C1E793F4B00116DAA /* Apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Apple.png; sourceTree = "<group>"; };
+		CDD2AC7C1E793F4B00116DAA /* Ap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ap.png; sourceTree = "<group>"; };
 		CDDD99921E348BE500E10034 /* BoxEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BoxEnum.swift; path = ../Home/BoxEnum.swift; sourceTree = "<group>"; };
 		CDDD99941E34931F00E10034 /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		CDEB19951E389569005F1D84 /* HomeNaviBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeNaviBar.swift; sourceTree = "<group>"; };
@@ -286,7 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				CD86F6E21E4969EA0027D917 /* TodayHealine.entitlements */,
-				CDD2AC7C1E793F4B00116DAA /* Apple.png */,
+				CDD2AC7C1E793F4B00116DAA /* Ap.png */,
 				CD6249771E2C6A9E00E22002 /* AppDelegate.swift */,
 				CD74597E1E6EBB0E00928264 /* DataBaseController.swift */,
 				CDB3AD981E2C9FF50028E90C /* Model */,
@@ -594,7 +594,7 @@
 				CD60B2D31E4AE41600B11E3B /* RecHotTableViewCell.xib in Resources */,
 				CD62497F1E2C6A9E00E22002 /* Assets.xcassets in Resources */,
 				CD60B2CF1E4AD31700B11E3B /* HotCollectionViewCell.xib in Resources */,
-				CDD2AC7D1E793F4B00116DAA /* Apple.png in Resources */,
+				CDD2AC7D1E793F4B00116DAA /* Ap.png in Resources */,
 				CD86F6E41E496A4C0027D917 /* apple-app-site-association in Resources */,
 				CD62498C1E2C6BC300E22002 /* Cartfile in Resources */,
 				CD60B2DD1E4AE4E100B11E3B /* HotTableViewCell.xib in Resources */,

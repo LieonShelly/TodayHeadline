@@ -1,0 +1,6 @@
+framework module CHPushSocket {
+  umbrella header "CHPushSocket-umbrella.h"
+
+  export *
+  module * { export * }
+}

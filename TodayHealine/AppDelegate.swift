@@ -24,8 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         DataBaseController.saveContext()
     }
-    
-
 }
 
 extension AppDelegate {
@@ -37,7 +35,7 @@ extension AppDelegate {
         content.body = "Just a reminder to eat your favourtite healty food."
         content.sound = UNNotificationSound.default()
         content.categoryIdentifier = "foodCategory"
-         guard let path = Bundle.main.path(forResource: "Apple", ofType: "png") else { return  }
+         guard let path = Bundle.main.path(forResource: "Ap", ofType: "png") else { return  }
         let url = URL(fileURLWithPath: path)
         guard let attachment = try? UNNotificationAttachment(identifier: "logo", url: url, options: nil) else { return }
         content.attachments = [attachment]

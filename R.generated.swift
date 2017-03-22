@@ -25,8 +25,8 @@ struct R: Rswift.Validatable {
   struct file {
     /// Resource file `.swiftlint.yml`.
     static let swiftlintYml = Rswift.FileResource(bundle: R.hostingBundle, name: ".swiftlint", pathExtension: "yml")
-    /// Resource file `Apple.png`.
-    static let applePng = Rswift.FileResource(bundle: R.hostingBundle, name: "Apple", pathExtension: "png")
+    /// Resource file `Ap.png`.
+    static let apPng = Rswift.FileResource(bundle: R.hostingBundle, name: "Ap", pathExtension: "png")
     /// Resource file `Cartfile`.
     static let cartfile = Rswift.FileResource(bundle: R.hostingBundle, name: "Cartfile", pathExtension: "")
     /// Resource file `apple-app-site-association`.
@@ -38,9 +38,9 @@ struct R: Rswift.Validatable {
       return fileResource.bundle.url(forResource: fileResource)
     }
     
-    /// `bundle.url(forResource: "Apple", withExtension: "png")`
-    static func applePng(_: Void = ()) -> Foundation.URL? {
-      let fileResource = R.file.applePng
+    /// `bundle.url(forResource: "Ap", withExtension: "png")`
+    static func apPng(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.apPng
       return fileResource.bundle.url(forResource: fileResource)
     }
     
@@ -64,8 +64,12 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
   
-  /// This `R.image` struct is generated, and contains static references to 15 images.
+  /// This `R.image` struct is generated, and contains static references to 17 images.
   struct image {
+    /// Image `Ap`.
+    static let ap = Rswift.ImageResource(bundle: R.hostingBundle, name: "Ap")
+    /// Image `Apple`.
+    static let apple = Rswift.ImageResource(bundle: R.hostingBundle, name: "Apple")
     /// Image `Salad`.
     static let salad = Rswift.ImageResource(bundle: R.hostingBundle, name: "Salad")
     /// Image `daren`.
@@ -96,6 +100,16 @@ struct R: Rswift.Validatable {
     static let 评论 = Rswift.ImageResource(bundle: R.hostingBundle, name: "评论")
     /// Image `赞`.
     static let 赞 = Rswift.ImageResource(bundle: R.hostingBundle, name: "赞")
+    
+    /// `UIImage(named: "Ap", bundle: ..., traitCollection: ...)`
+    static func ap(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ap, compatibleWith: traitCollection)
+    }
+    
+    /// `UIImage(named: "Apple", bundle: ..., traitCollection: ...)`
+    static func apple(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.apple, compatibleWith: traitCollection)
+    }
     
     /// `UIImage(named: "Salad", bundle: ..., traitCollection: ...)`
     static func salad(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {

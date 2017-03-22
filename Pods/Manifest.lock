@@ -1,12 +1,18 @@
 PODS:
+  - CHPushSocket (0.5.1):
+    - SocketRocket (~> 0.5.1)
   - LRefresh (0.0.3)
+  - SocketRocket (0.5.1)
 
 DEPENDENCIES:
+  - CHPushSocket
   - LRefresh
 
 SPEC CHECKSUMS:
+  CHPushSocket: 0d0f71e8b24d25b8c1090a4f43d156379dc80812
   LRefresh: 7647c00576de6f371788cfc00533a55ba8975b9f
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
 
-PODFILE CHECKSUM: a7e7a104f3b20633e265d239e0a91e3f829dd9f0
+PODFILE CHECKSUM: 38ae0acbfb7ce41b71fdbc0776a1ee7d2aee5abd
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

@@ -10,7 +10,9 @@
 #endif
 #endif
 
+#import "SocketRocket.h"
+#import "SRWebSocket.h"
 
-FOUNDATION_EXPORT double Pods_TodayHealineVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_TodayHealineVersionString[];
+FOUNDATION_EXPORT double SocketRocketVersionNumber;
+FOUNDATION_EXPORT const unsigned char SocketRocketVersionString[];
 

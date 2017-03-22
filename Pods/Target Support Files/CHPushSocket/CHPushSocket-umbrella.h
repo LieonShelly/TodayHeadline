@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_TodayHealineVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_TodayHealineVersionString[];
+FOUNDATION_EXPORT double CHPushSocketVersionNumber;
+FOUNDATION_EXPORT const unsigned char CHPushSocketVersionString[];
 
